@@ -44,3 +44,26 @@ D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pd
 D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
 D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
 D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csprojAssemblyReference.cache
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormBienLaiGV.resources
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormBienLaiHV.resources
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormDoiMatKhau.resources
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormLogin.resources
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormQLDD.resources
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormQLGiaoVien.resources
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormQLHocSinh.resources
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormQLLopHoc.resources
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormQLTHP.resources
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormQLTL.resources
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormThemGiaoVien.resources
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormThemHocSinh.resources
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormThemLopHoc.resources
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
