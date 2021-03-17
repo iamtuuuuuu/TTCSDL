@@ -52,16 +52,21 @@ namespace WindowsFormsApp2
             AddForm(f);
         }
 
-        private void QuanLyGiaoVienToolStripMenuItem_Click(object sender, EventArgs e)
+        private void QuanLyGiaoVienToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             FormQLGiaoVien f = new FormQLGiaoVien();
             AddForm(f);
         }
 
-        private void QuanLyLopHocToolStripMenuItem_Click(object sender, EventArgs e)
+        private void QuanLyLopHocToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             FormQLLopHoc f = new FormQLLopHoc();
             AddForm(f);
+        }
+
+        private void hướngDẫnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
