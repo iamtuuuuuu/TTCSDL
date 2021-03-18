@@ -40,10 +40,8 @@ namespace WindowsFormsApp2
 
         private void ThoatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormLogin flogin = new FormLogin();
-            this.Hide();
-            flogin.Show();
-            //Application.Exit();
+            this.Close();
+            FormLogin.fLogin.Visible = true; ;
         }
 
         private void QuanLyHocSinhToolStripMenuItem_Click(object sender, EventArgs e)
@@ -64,9 +62,14 @@ namespace WindowsFormsApp2
             AddForm(f);
         }
 
-        private void hướngDẫnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void HuongDanToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FormLogin.fLogin.Visible = true;
         }
     }
 }

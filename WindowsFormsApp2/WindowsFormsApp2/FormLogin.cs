@@ -12,16 +12,30 @@ namespace WindowsFormsApp2
 {
     public partial class FormLogin : Form
     {
+        public static FormLogin fLogin;
         public FormLogin()
         {
+            fLogin = this;
             InitializeComponent();
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            Form1 f1 = new Form1();
-            this.Hide();
-            f1.Show();
+            if (txbTaiKhoan.Text == "admin" && txbMatKhau.Text == "admin")
+            {
+                this.Visible = false;
+                Form1 fquanLy = new Form1();
+                fquanLy.Show();
+            }
+            else
+            {
+                MessageBox.Show("Tên truy cập hoặc mật khẩu sai");
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

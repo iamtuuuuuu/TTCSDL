@@ -85,6 +85,7 @@ namespace WindowsFormsApp2
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormQLTHP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormQLTHP";
             this.Load += new System.EventHandler(this.FormQLTHP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

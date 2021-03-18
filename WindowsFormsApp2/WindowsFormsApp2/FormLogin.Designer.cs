@@ -30,9 +30,9 @@ namespace WindowsFormsApp2
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbTaiKhoan = new System.Windows.Forms.TextBox();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbMatKhau = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -47,13 +47,13 @@ namespace WindowsFormsApp2
             this.label1.TabIndex = 0;
             this.label1.Text = "Tài khoản";
             // 
-            // textBox1
+            // txbTaiKhoan
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(229, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(269, 31);
-            this.textBox1.TabIndex = 1;
+            this.txbTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbTaiKhoan.Location = new System.Drawing.Point(229, 73);
+            this.txbTaiKhoan.Name = "txbTaiKhoan";
+            this.txbTaiKhoan.Size = new System.Drawing.Size(269, 31);
+            this.txbTaiKhoan.TabIndex = 1;
             // 
             // btnThoat
             // 
@@ -64,15 +64,16 @@ namespace WindowsFormsApp2
             this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // textBox2
+            // txbMatKhau
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(229, 141);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(269, 31);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.txbMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbMatKhau.Location = new System.Drawing.Point(229, 141);
+            this.txbMatKhau.Name = "txbMatKhau";
+            this.txbMatKhau.Size = new System.Drawing.Size(269, 31);
+            this.txbMatKhau.TabIndex = 2;
+            this.txbMatKhau.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -102,12 +103,13 @@ namespace WindowsFormsApp2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 333);
             this.Controls.Add(this.btnDangNhap);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txbMatKhau);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbTaiKhoan);
             this.Controls.Add(this.label1);
             this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -117,9 +119,9 @@ namespace WindowsFormsApp2
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbTaiKhoan;
         private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbMatKhau;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDangNhap;
     }

@@ -33,13 +33,11 @@ namespace WindowsFormsApp2
             this.btnThem = new System.Windows.Forms.Button();
             this.btnTraLuong = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbTimKiem = new System.Windows.Forms.TextBox();
             this.comboBoxSearch = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewDanhSachHocSinh = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSachHocSinh)).BeginInit();
+            this.dtGVDanhSachHocSinh = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGVDanhSachHocSinh)).BeginInit();
             this.SuspendLayout();
             // 
             // btnXoa
@@ -84,13 +82,13 @@ namespace WindowsFormsApp2
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txbTimKiem
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(198, 323);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(636, 29);
-            this.textBox1.TabIndex = 33;
+            this.txbTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbTimKiem.Location = new System.Drawing.Point(198, 323);
+            this.txbTimKiem.Name = "txbTimKiem";
+            this.txbTimKiem.Size = new System.Drawing.Size(636, 29);
+            this.txbTimKiem.TabIndex = 33;
             // 
             // comboBoxSearch
             // 
@@ -115,27 +113,15 @@ namespace WindowsFormsApp2
             this.label1.TabIndex = 31;
             this.label1.Text = "Danh sách học sinh";
             // 
-            // dataGridViewDanhSachHocSinh
+            // dtGVDanhSachHocSinh
             // 
-            this.dataGridViewDanhSachHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDanhSachHocSinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
-            this.dataGridViewDanhSachHocSinh.Location = new System.Drawing.Point(12, 61);
-            this.dataGridViewDanhSachHocSinh.Name = "dataGridViewDanhSachHocSinh";
-            this.dataGridViewDanhSachHocSinh.Size = new System.Drawing.Size(916, 234);
-            this.dataGridViewDanhSachHocSinh.TabIndex = 30;
-            this.dataGridViewDanhSachHocSinh.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDanhSachHocSinh_CellDoubleClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Họ tên";
-            this.Column2.Name = "Column2";
+            this.dtGVDanhSachHocSinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtGVDanhSachHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGVDanhSachHocSinh.Location = new System.Drawing.Point(12, 61);
+            this.dtGVDanhSachHocSinh.Name = "dtGVDanhSachHocSinh";
+            this.dtGVDanhSachHocSinh.Size = new System.Drawing.Size(916, 234);
+            this.dtGVDanhSachHocSinh.TabIndex = 30;
+            this.dtGVDanhSachHocSinh.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDanhSachHocSinh_CellDoubleClick);
             // 
             // FormQLHocSinh
             // 
@@ -146,15 +132,16 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnTraLuong);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbTimKiem);
             this.Controls.Add(this.comboBoxSearch);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridViewDanhSachHocSinh);
+            this.Controls.Add(this.dtGVDanhSachHocSinh);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormQLHocSinh";
             this.Text = "FormQLHocSinh";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSachHocSinh)).EndInit();
+            this.Load += new System.EventHandler(this.FormQLHocSinh_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtGVDanhSachHocSinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,11 +153,9 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnTraLuong;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbTimKiem;
         private System.Windows.Forms.ComboBox comboBoxSearch;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridViewDanhSachHocSinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridView dtGVDanhSachHocSinh;
     }
 }

@@ -34,10 +34,10 @@ namespace WindowsFormsApp2
             this.DoiMatKhauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ThoatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.QuanLyHocSinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelContent = new System.Windows.Forms.Panel();
             this.QuanLyGiaoVienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.QuanLyLopHocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HuongDanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelContent = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,14 +67,14 @@ namespace WindowsFormsApp2
             // DoiMatKhauToolStripMenuItem
             // 
             this.DoiMatKhauToolStripMenuItem.Name = "DoiMatKhauToolStripMenuItem";
-            this.DoiMatKhauToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.DoiMatKhauToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.DoiMatKhauToolStripMenuItem.Text = "Đổi mật khẩu";
             this.DoiMatKhauToolStripMenuItem.Click += new System.EventHandler(this.DoiMatKhauToolStripMenuItem_Click);
             // 
             // ThoatToolStripMenuItem
             // 
             this.ThoatToolStripMenuItem.Name = "ThoatToolStripMenuItem";
-            this.ThoatToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ThoatToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.ThoatToolStripMenuItem.Text = "Thoát";
             this.ThoatToolStripMenuItem.Click += new System.EventHandler(this.ThoatToolStripMenuItem_Click);
             // 
@@ -84,13 +84,6 @@ namespace WindowsFormsApp2
             this.QuanLyHocSinhToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
             this.QuanLyHocSinhToolStripMenuItem.Text = "Quản lý học sinh";
             this.QuanLyHocSinhToolStripMenuItem.Click += new System.EventHandler(this.QuanLyHocSinhToolStripMenuItem_Click);
-            // 
-            // panelContent
-            // 
-            this.panelContent.Location = new System.Drawing.Point(0, 27);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(944, 447);
-            this.panelContent.TabIndex = 1;
             // 
             // QuanLyGiaoVienToolStripMenuItem
             // 
@@ -111,7 +104,14 @@ namespace WindowsFormsApp2
             this.HuongDanToolStripMenuItem.Name = "HuongDanToolStripMenuItem";
             this.HuongDanToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.HuongDanToolStripMenuItem.Text = "Hướng dẫn";
-            this.HuongDanToolStripMenuItem.Click += new System.EventHandler(this.hướngDẫnToolStripMenuItem_Click);
+            this.HuongDanToolStripMenuItem.Click += new System.EventHandler(this.HuongDanToolStripMenuItem_Click);
+            // 
+            // panelContent
+            // 
+            this.panelContent.Location = new System.Drawing.Point(0, 27);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(944, 447);
+            this.panelContent.TabIndex = 1;
             // 
             // Form1
             // 
@@ -122,7 +122,9 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

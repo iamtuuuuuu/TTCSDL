@@ -34,5 +34,21 @@ namespace WindowsFormsApp2
             FormQLTHP f = new FormQLTHP();
             f.Show();
         }
+
+        private void FormQLHocSinh_Load(object sender, EventArgs e)
+        {
+            LoadHS();
+        }
+        private void LoadHS()
+        {
+            dtGVDanhSachHocSinh.DataSource = new CSDL().SelectData("exec SelectAllHV");
+
+            dtGVDanhSachHocSinh.Columns["MaHV"].HeaderText = "Mã học viên";
+            dtGVDanhSachHocSinh.Columns["HoTen"].HeaderText = "Họ tên";
+            dtGVDanhSachHocSinh.Columns["SDT"].HeaderText = "Số điện thoại";
+            dtGVDanhSachHocSinh.Columns["NgaySinh"].HeaderText = "Ngày Sinh";
+            dtGVDanhSachHocSinh.Columns["DiaChi"].HeaderText = "Địa chỉ";
+            dtGVDanhSachHocSinh.Columns["GioiTinh"].HeaderText = "Giới Tính";
+        }
     }
 }
