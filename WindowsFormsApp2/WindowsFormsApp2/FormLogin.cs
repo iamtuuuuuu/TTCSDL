@@ -12,10 +12,8 @@ namespace WindowsFormsApp2
 {
     public partial class FormLogin : Form
     {
-        public static FormLogin fLogin;
         public FormLogin()
         {
-            fLogin = this;
             InitializeComponent();
         }
 
@@ -25,7 +23,8 @@ namespace WindowsFormsApp2
             {
                 this.Visible = false;
                 Form1 fquanLy = new Form1();
-                fquanLy.Show();
+                fquanLy.ShowDialog();
+                this.Visible = true;
             }
             else
             {
