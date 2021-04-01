@@ -34,7 +34,6 @@ namespace WindowsFormsApp2
             this.textBoxMaLop = new System.Windows.Forms.TextBox();
             this.textBoxTenLop = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxHocPhi = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxMaMonHoc = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@ namespace WindowsFormsApp2
             this.comboBoxMaGiaoVien = new System.Windows.Forms.ComboBox();
             this.buttonLuu = new System.Windows.Forms.Button();
             this.buttonThoat = new System.Windows.Forms.Button();
+            this.comboBoxMaMHP = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -90,31 +90,23 @@ namespace WindowsFormsApp2
             this.label3.TabIndex = 3;
             this.label3.Text = "Tên lớp";
             // 
-            // textBoxHocPhi
-            // 
-            this.textBoxHocPhi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHocPhi.Location = new System.Drawing.Point(167, 240);
-            this.textBoxHocPhi.Name = "textBoxHocPhi";
-            this.textBoxHocPhi.Size = new System.Drawing.Size(216, 29);
-            this.textBoxHocPhi.TabIndex = 6;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(29, 243);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 24);
+            this.label4.Size = new System.Drawing.Size(83, 24);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Học phí 1 buổi";
+            this.label4.Text = "Mã MHP";
             // 
             // comboBoxMaMonHoc
             // 
             this.comboBoxMaMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxMaMonHoc.FormattingEnabled = true;
-            this.comboBoxMaMonHoc.Location = new System.Drawing.Point(177, 320);
+            this.comboBoxMaMonHoc.Location = new System.Drawing.Point(167, 320);
             this.comboBoxMaMonHoc.Name = "comboBoxMaMonHoc";
-            this.comboBoxMaMonHoc.Size = new System.Drawing.Size(206, 32);
+            this.comboBoxMaMonHoc.Size = new System.Drawing.Size(216, 32);
             this.comboBoxMaMonHoc.TabIndex = 7;
             // 
             // label5
@@ -141,9 +133,9 @@ namespace WindowsFormsApp2
             // 
             this.comboBoxMaGiaoVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxMaGiaoVien.FormattingEnabled = true;
-            this.comboBoxMaGiaoVien.Location = new System.Drawing.Point(177, 392);
+            this.comboBoxMaGiaoVien.Location = new System.Drawing.Point(167, 392);
             this.comboBoxMaGiaoVien.Name = "comboBoxMaGiaoVien";
-            this.comboBoxMaGiaoVien.Size = new System.Drawing.Size(206, 32);
+            this.comboBoxMaGiaoVien.Size = new System.Drawing.Size(216, 32);
             this.comboBoxMaGiaoVien.TabIndex = 9;
             // 
             // buttonLuu
@@ -167,18 +159,27 @@ namespace WindowsFormsApp2
             this.buttonThoat.UseVisualStyleBackColor = true;
             this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click);
             // 
+            // comboBoxMaMHP
+            // 
+            this.comboBoxMaMHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxMaMHP.FormattingEnabled = true;
+            this.comboBoxMaMHP.Location = new System.Drawing.Point(167, 243);
+            this.comboBoxMaMHP.Name = "comboBoxMaMHP";
+            this.comboBoxMaMHP.Size = new System.Drawing.Size(216, 32);
+            this.comboBoxMaMHP.TabIndex = 13;
+            // 
             // FormThemLopHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(409, 508);
+            this.Controls.Add(this.comboBoxMaMHP);
             this.Controls.Add(this.buttonThoat);
             this.Controls.Add(this.buttonLuu);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBoxMaGiaoVien);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBoxMaMonHoc);
-            this.Controls.Add(this.textBoxHocPhi);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxTenLop);
             this.Controls.Add(this.label3);
@@ -187,6 +188,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label1);
             this.Name = "FormThemLopHoc";
             this.Text = "FormThemLopHoc";
+            this.Load += new System.EventHandler(this.FormThemLopHoc_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,7 +201,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.TextBox textBoxMaLop;
         private System.Windows.Forms.TextBox textBoxTenLop;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxHocPhi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxMaMonHoc;
         private System.Windows.Forms.Label label5;
@@ -207,5 +208,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.ComboBox comboBoxMaGiaoVien;
         private System.Windows.Forms.Button buttonLuu;
         private System.Windows.Forms.Button buttonThoat;
+        private System.Windows.Forms.ComboBox comboBoxMaMHP;
     }
 }
