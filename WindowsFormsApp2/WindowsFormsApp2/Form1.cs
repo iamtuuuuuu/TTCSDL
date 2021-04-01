@@ -31,7 +31,13 @@ namespace WindowsFormsApp2
             this.panelContent.Controls.Add(f);
             f.Show();
         }
-
+        private void AdminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyHocSinhToolStripMenuItem.BackColor = Color.LightGray;
+            QuanLyGiaoVienToolStripMenuItem.BackColor = Color.LightGray;
+            QuanLyLopHocToolStripMenuItem.BackColor = Color.LightGray;
+            HuongDanToolStripMenuItem.BackColor = Color.LightGray;
+        }
         private void DoiMatKhauToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormDoiMatKhau f = new FormDoiMatKhau();
@@ -41,35 +47,50 @@ namespace WindowsFormsApp2
         private void ThoatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            FormLogin.fLogin.Visible = true; ;
         }
 
         private void QuanLyHocSinhToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            QuanLyHocSinhToolStripMenuItem.BackColor = Color.SkyBlue;
+            QuanLyGiaoVienToolStripMenuItem.BackColor = Color.LightGray;
+            QuanLyLopHocToolStripMenuItem.BackColor = Color.LightGray;
+            HuongDanToolStripMenuItem.BackColor = Color.LightGray;
             FormQLHocSinh f = new FormQLHocSinh();
             AddForm(f);
         }
 
         private void QuanLyGiaoVienToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            QuanLyHocSinhToolStripMenuItem.BackColor = Color.LightGray;
+            QuanLyGiaoVienToolStripMenuItem.BackColor = Color.SkyBlue;
+            QuanLyLopHocToolStripMenuItem.BackColor = Color.LightGray;
+            HuongDanToolStripMenuItem.BackColor = Color.LightGray;
             FormQLGiaoVien f = new FormQLGiaoVien();
             AddForm(f);
         }
 
         private void QuanLyLopHocToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            QuanLyHocSinhToolStripMenuItem.BackColor = Color.LightGray;
+            QuanLyGiaoVienToolStripMenuItem.BackColor = Color.LightGray;
+            QuanLyLopHocToolStripMenuItem.BackColor = Color.SkyBlue;
+            HuongDanToolStripMenuItem.BackColor = Color.LightGray;
             FormQLLopHoc f = new FormQLLopHoc();
             AddForm(f);
         }
 
         private void HuongDanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            QuanLyHocSinhToolStripMenuItem.BackColor = Color.LightGray;
+            QuanLyGiaoVienToolStripMenuItem.BackColor = Color.LightGray;
+            QuanLyLopHocToolStripMenuItem.BackColor = Color.LightGray;
+            HuongDanToolStripMenuItem.BackColor = Color.SkyBlue;
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            FormLogin.fLogin.Visible = true;
         }
+
+
     }
 }
