@@ -38,5 +38,10 @@ namespace WindowsFormsApp2
             // Sua tt nv
             new FormThemLopHoc(null).ShowDialog();
         }
+
+        private void FormQLLopHoc_Load(object sender, EventArgs e)
+        {
+            dataGridViewDanhSachLop.DataSource = new CSDL().SelectData("select * from LOPHOC");
+        }
     }
 }

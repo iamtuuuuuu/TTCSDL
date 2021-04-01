@@ -29,9 +29,6 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
-            this.TenLopHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewDanhSachLop = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxSearch = new System.Windows.Forms.ComboBox();
@@ -43,29 +40,10 @@ namespace WindowsFormsApp2
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSachLop)).BeginInit();
             this.SuspendLayout();
             // 
-            // TenLopHoc
-            // 
-            this.TenLopHoc.HeaderText = "Tên lớp học";
-            this.TenLopHoc.Name = "TenLopHoc";
-            this.TenLopHoc.Width = 200;
-            // 
-            // MaLop
-            // 
-            this.MaLop.HeaderText = "Mã lớp học";
-            this.MaLop.Name = "MaLop";
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            // 
             // dataGridViewDanhSachLop
             // 
+            this.dataGridViewDanhSachLop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDanhSachLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDanhSachLop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.STT,
-            this.MaLop,
-            this.TenLopHoc});
             this.dataGridViewDanhSachLop.Location = new System.Drawing.Point(12, 53);
             this.dataGridViewDanhSachLop.Name = "dataGridViewDanhSachLop";
             this.dataGridViewDanhSachLop.Size = new System.Drawing.Size(916, 218);
@@ -163,6 +141,7 @@ namespace WindowsFormsApp2
             this.Name = "FormQLLopHoc";
             this.Text = "FormQLLopHoc";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormQLLopHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSachLop)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -170,10 +149,6 @@ namespace WindowsFormsApp2
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenLopHoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridView dataGridViewDanhSachLop;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxSearch;
