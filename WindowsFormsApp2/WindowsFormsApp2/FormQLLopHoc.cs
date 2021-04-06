@@ -104,18 +104,18 @@ namespace WindowsFormsApp2
             }
         }
 
-        //private void btnGVXoa_Click(object sender, EventArgs e)
-        //{
-        //    var db = new CSDL();
-        //    if (MessageBox.Show("Bạn muốn xóa giáo viên " + dgvGiaoVien.CurrentRow.Cells["TenGV"].Value.ToString() + " ?", "Warning!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-        //    {
-        //        var tenGV = dgvGiaoVien.CurrentRow.Cells["TenGV"].Value.ToString();
-        //        var idGV = dgvGiaoVien.CurrentRow.Cells["MaGV"].Value.ToString();
-        //        db.del_data(idGV);
-        //        MessageBox.Show("Đã xóa giáo viên : " + tenGV);
-        //    }
-        //    LoadDSGV();
-        //}
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            var db = new CSDL();
+            if (MessageBox.Show("Bạn muốn xóa lớp học " + dataGridViewDanhSachLop.CurrentRow.Cells["TenLH"].Value.ToString() + " ?", "Warning!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                var tenLH = dataGridViewDanhSachLop.CurrentRow.Cells["TenLH"].Value.ToString();
+                var idLH = dataGridViewDanhSachLop.CurrentRow.Cells["MaLH"].Value.ToString();
+                db.deleteLH(idLH);
+                MessageBox.Show("Đã xóa lớp học : " + tenLH);
+            }
+            reload();
+        }
 
     }
 }

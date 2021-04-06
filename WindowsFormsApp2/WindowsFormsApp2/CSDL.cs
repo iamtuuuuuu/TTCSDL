@@ -75,10 +75,9 @@ namespace WindowsFormsApp2
         {
             try
             {
-                conn.Open();
                 cmd = new SqlCommand(sql, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                //return (int)cmd.ExecuteScalar();
+                conn.Open();
 
                 foreach (var p in lstPara)
                 {
@@ -96,6 +95,28 @@ namespace WindowsFormsApp2
             {
                 conn.Close();
             }
+        }
+
+        public Boolean deleteLH(String id)
+        {
+            bool check = false;
+            try
+            {
+                conn.Open();
+                string sql = "DELETE From LOPHOC where MaLH = '" + id + "'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+                check = true;
+                conn.Close();
+            }
+            catch (Exception)
+            {
+                check = false;
+                throw;
+            }
+
+
+            return check;
         }
     }
 }

@@ -124,6 +124,7 @@ namespace WindowsFormsApp2
             this.btnXoa.TabIndex = 21;
             this.btnXoa.Text = "Xóa lớp học";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // FormQLLopHoc
             // 

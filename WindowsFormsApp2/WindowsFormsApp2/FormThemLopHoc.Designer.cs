@@ -147,6 +147,7 @@ namespace WindowsFormsApp2
             this.buttonLuu.TabIndex = 11;
             this.buttonLuu.Text = "Lưu";
             this.buttonLuu.UseVisualStyleBackColor = true;
+            this.buttonLuu.Click += new System.EventHandler(this.buttonLuu_Click);
             // 
             // buttonThoat
             // 
@@ -187,6 +188,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormThemLopHoc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormThemLopHoc";
             this.Load += new System.EventHandler(this.FormThemLopHoc_Load);
             this.ResumeLayout(false);
