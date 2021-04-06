@@ -19,17 +19,21 @@ namespace WindowsFormsApp2
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if (txbTaiKhoan.Text == "admin" && txbMatKhau.Text == "admin")
-            {
-                this.Visible = false;
-                Form1 fquanLy = new Form1();
-                fquanLy.ShowDialog();
-                this.Visible = true;
-            }
-            else
-            {
-                MessageBox.Show("Tên truy cập hoặc mật khẩu sai");
-            }
+            //if (txbTaiKhoan.Text == "admin" && txbMatKhau.Text == "admin")
+            //{
+            //    this.Visible = false;
+            //    Form1 fquanLy = new Form1();
+            //    fquanLy.ShowDialog();
+            //    this.Visible = true;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Tên truy cập hoặc mật khẩu sai");
+            //}
+            this.Visible = false;
+            Form1 fquanLy = new Form1();
+            fquanLy.ShowDialog();
+            this.Visible = true;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

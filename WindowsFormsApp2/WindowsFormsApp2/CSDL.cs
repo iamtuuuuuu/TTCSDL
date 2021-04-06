@@ -11,7 +11,7 @@ namespace WindowsFormsApp2
 {
     public class CSDL
     {
-        private string connectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Quản lý trung tâm học thêm;Trusted_Connection=Yes;";
+        private string connectionString = "Data Source=DESKTOP-68O7DLF;Initial Catalog=Quản lý trung tâm học thêm;Trusted_Connection=Yes;";
         private SqlConnection conn;
 
         //private string sql;
@@ -51,14 +51,33 @@ namespace WindowsFormsApp2
                 conn.Close();
             }
         }
-        public int ExeCute(string sql, List<CustomParameter> lstPara)
+        public DataRow Select(string sql)
         {
             try
             {
                 conn.Open();
                 cmd = new SqlCommand(sql, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt.Rows[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Loading Error: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public int ExeCute(string sql, List<CustomParameter> lstPara)
+        {
+            try
+            {
+                cmd = new SqlCommand(sql, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                //return (int)cmd.ExecuteScalar();
+                conn.Open();
 
                 foreach (var p in lstPara)
                 {
@@ -76,6 +95,28 @@ namespace WindowsFormsApp2
             {
                 conn.Close();
             }
+        }
+
+        public Boolean deleteLH(String id)
+        {
+            bool check = false;
+            try
+            {
+                conn.Open();
+                string sql = "DELETE From LOPHOC where MaLH = '" + id + "'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+                check = true;
+                conn.Close();
+            }
+            catch (Exception)
+            {
+                check = false;
+                throw;
+            }
+
+
+            return check;
         }
     }
 }
