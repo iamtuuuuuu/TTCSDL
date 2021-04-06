@@ -16,17 +16,23 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
-
+        private void dgvDanhSachHocVien_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                string maHV = dgvDanhSachHocVien.Rows[e.RowIndex].Cells["MaHV"].Value.ToString();
+                new FormThemHocSinh(maHV).ShowDialog();
+                FormQLHocSinh_Load(sender, e);
+            }
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
             new FormThemHocSinh(null).ShowDialog();
+            reload();
         }
-
-        private void dataGridViewDanhSachHocSinh_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void reload()
         {
-
-            //sua
-            new FormThemHocSinh(null).ShowDialog();
+            dgvDanhSachHocVien.DataSource = new CSDL().SelectData("SELECT * FROM HocVien");
         }
 
         private void btnThuHocPhi_Click(object sender, EventArgs e)
@@ -41,14 +47,59 @@ namespace WindowsFormsApp2
         }
         private void LoadHS()
         {
-            dtGVDanhSachHocSinh.DataSource = new CSDL().SelectData("exec SelectAllHV");
+            dgvDanhSachHocVien.DataSource = new CSDL().SelectData("exec SelectAllHV");
 
-            dtGVDanhSachHocSinh.Columns["MaHV"].HeaderText = "Mã học viên";
-            dtGVDanhSachHocSinh.Columns["HoTen"].HeaderText = "Họ tên";
-            dtGVDanhSachHocSinh.Columns["SDT"].HeaderText = "Số điện thoại";
-            dtGVDanhSachHocSinh.Columns["NgaySinh"].HeaderText = "Ngày Sinh";
-            dtGVDanhSachHocSinh.Columns["DiaChi"].HeaderText = "Địa chỉ";
-            dtGVDanhSachHocSinh.Columns["GioiTinh"].HeaderText = "Giới Tính";
+            dgvDanhSachHocVien.Columns["MaHV"].HeaderText = "Mã học viên";
+            dgvDanhSachHocVien.Columns["HoTen"].HeaderText = "Họ tên";
+            dgvDanhSachHocVien.Columns["SDT"].HeaderText = "Số điện thoại";
+            dgvDanhSachHocVien.Columns["NgaySinh"].HeaderText = "Ngày Sinh";
+            dgvDanhSachHocVien.Columns["DiaChi"].HeaderText = "Địa chỉ";
+            dgvDanhSachHocVien.Columns["GioiTinh"].HeaderText = "Giới Tính";
+        }
+        private void resetValue()
+        {
+            txbTimKiem.Text = "";
+        }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txbTimKiem.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập thông tin tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (cbbTimKiem.SelectedIndex != -1)
+                {
+                    String valueSearch = txbTimKiem.Text;
+                    var db = new CSDL();
+                    String sqlSearch = "";
+                    if (cbbTimKiem.SelectedIndex == 0)
+                    {
+                        sqlSearch = "exec searchMaHV '" + valueSearch + "'";
+                        if (db.SelectData(sqlSearch).Rows.Count != 0)
+                        {
+                            new SearchOutHV(sqlSearch).Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không tìm thấy thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else if (cbbTimKiem.SelectedIndex == 1)
+                    {
+                        sqlSearch = "exec searchHoTenHV '" + valueSearch + "'";
+                        if (db.SelectData(sqlSearch).Rows.Count != 0)
+                        {
+                            new SearchOutHV(sqlSearch).Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không tìm thấy thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+                resetValue();
+            }
         }
     }
 }

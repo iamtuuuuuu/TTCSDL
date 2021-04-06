@@ -51,6 +51,26 @@ namespace WindowsFormsApp2
                 conn.Close();
             }
         }
+        public DataRow Select(string sql)
+        {
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand(sql, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt.Rows[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Loading Error: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
         public int ExeCute(string sql, List<CustomParameter> lstPara)
         {
             try

@@ -67,3 +67,4 @@ E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsForms
 E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
 E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.SearchOutHV.resources
