@@ -46,6 +46,7 @@ namespace WindowsFormsApp2
             comboBoxChonLop.SelectedIndex = 7;
             comboBoxChonThang.SelectedIndex = 8;
 
+            textBoxSearch.Text = "Nhập tên học sinh...";
         }
 
         private void buttonLoad_Click(object sender, EventArgs e)
@@ -126,15 +127,20 @@ namespace WindowsFormsApp2
             }
         }
 
-        // bỏ
-        private void buttonHuy_Click(object sender, EventArgs e)
+        private void textBoxSearch_Leave(object sender, EventArgs e)
         {
-            this.Close();
+            if (textBoxSearch.Text == "")
+            {
+                textBoxSearch.Text = "Nhập tên học sinh...";
+            }
         }
 
-        private void buttonLuu_Click(object sender, EventArgs e)
+        private void textBoxSearch_Enter(object sender, EventArgs e)
         {
-
+            if (textBoxSearch.Text == "Nhập tên học sinh...")
+            {
+                textBoxSearch.Text = "";
+            }
         }
     }
 }

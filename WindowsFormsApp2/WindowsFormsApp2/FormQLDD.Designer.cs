@@ -112,6 +112,8 @@ namespace WindowsFormsApp2
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(422, 31);
             this.textBoxSearch.TabIndex = 8;
+            this.textBoxSearch.Enter += new System.EventHandler(this.textBoxSearch_Enter);
+            this.textBoxSearch.Leave += new System.EventHandler(this.textBoxSearch_Leave);
             // 
             // buttonLoad
             // 
