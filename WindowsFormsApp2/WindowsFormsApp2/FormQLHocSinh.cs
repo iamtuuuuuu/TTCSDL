@@ -87,7 +87,7 @@ namespace WindowsFormsApp2
                     }
                     else if (cbbTimKiem.SelectedIndex == 1)
                     {
-                        sqlSearch = "exec searchHoTenHV '" + valueSearch + "'";
+                        sqlSearch = "exec searchHoTenHV N'" + valueSearch + "'";
                         if (db.SelectData(sqlSearch).Rows.Count != 0)
                         {
                             new SearchOutHV(sqlSearch).Show();
@@ -99,6 +99,33 @@ namespace WindowsFormsApp2
                     }
                 }
                 resetValue();
+            }
+        }
+
+        private void txbTimKiem_ForeColorChanged(object sender, EventArgs e)
+        {
+            if (txbTimKiem.Text == "")
+                txbTimKiem.ForeColor = Color.Gray;
+            else
+                txbTimKiem.ForeColor = Color.Black;
+        }
+
+        private void txbTimKiem_Leave(object sender, EventArgs e)
+        {
+            if (txbTimKiem.Text == "")
+            {
+                txbTimKiem_ForeColorChanged(sender, e);
+                txbTimKiem.Text = "Nhập thông tin muốn tìm kiếm";
+            }
+                
+        }
+
+        private void txbTimKiem_Enter(object sender, EventArgs e)
+        {
+            if (txbTimKiem.Text == "Nhập thông tin muốn tìm kiếm")
+            {
+                txbTimKiem_ForeColorChanged(sender, e);
+                txbTimKiem.Text = "";
             }
         }
     }
