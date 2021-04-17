@@ -54,9 +54,7 @@ namespace WindowsFormsApp2
                 this.Text = "Cập nhật thông tin lớp học";
 
                 var r = new CSDL().Select(string.Format("searchMaLop '" + malh + "'"));
-
-                textBoxMaLop.Text = r["MaLH"].ToString();
-                textBoxMaLop.ReadOnly = true;
+                                
                 textBoxTenLop.Text = r["TenLH"].ToString();
 
                 string maMucHocPhi = r["MaMHP"].ToString();
@@ -72,7 +70,7 @@ namespace WindowsFormsApp2
         private void buttonLuu_Click(object sender, EventArgs e)
         {
             string sql;
-            string MaLH = textBoxMaLop.Text;
+            //string MaLH = textBoxMaLop.Text;
             string TenLH = textBoxTenLop.Text;
             string MaMHP = comboBoxMaMHP.Text;
             string MaMH = comboBoxMaMonHoc.Text;
@@ -80,14 +78,9 @@ namespace WindowsFormsApp2
 
             List<CustomParameter> lstPara = new List<CustomParameter>();
 
-            if (textBoxMaLop.ReadOnly != true)
+            if (string.IsNullOrEmpty(malh))
             {
                 sql = "ThemMoiLH";
-                lstPara.Add(new CustomParameter()
-                {
-                    key = "@MaLH",
-                    value = MaLH
-                });
             }
             else
             {
@@ -127,7 +120,7 @@ namespace WindowsFormsApp2
             var rs = new CSDL().ExeCute(sql, lstPara);
             if (rs == 1)
             {
-                if (textBoxMaLop.ReadOnly != true)
+                if (string.IsNullOrEmpty(malh))
                 {
                     MessageBox.Show("Thêm mới thành công");
                 }

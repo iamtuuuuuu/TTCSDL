@@ -112,13 +112,12 @@ namespace WindowsFormsApp2
                     value = keyValue.ToString()
                 });
 
-                Console.WriteLine(lstPara);
 
                 var rs = new CSDL().ExeCute(sql, lstPara);
                 if (rs == 1)
                 {
-                    MessageBox.Show("Cập nhật thành công");
-                    this.buttonLoad.PerformClick();
+                    //MessageBox.Show("Cập nhật thành công");
+                    //this.buttonLoad.PerformClick();
                 }
                 else
                 {
@@ -141,6 +140,17 @@ namespace WindowsFormsApp2
             {
                 textBoxSearch.Text = "";
             }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            new ThemBuoiHoc().ShowDialog();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Cập nhật thành công");
+            this.buttonLoad.PerformClick();
         }
     }
 }

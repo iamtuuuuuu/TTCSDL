@@ -140,6 +140,12 @@
     <Compile Include="SearchOutLH.Designer.cs">
       <DependentUpon>SearchOutLH.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemBuoiHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemBuoiHoc.Designer.cs">
+      <DependentUpon>ThemBuoiHoc.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +199,9 @@
     </Compile>
     <EmbeddedResource Include="SearchOutLH.resx">
       <DependentUpon>SearchOutLH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemBuoiHoc.resx">
+      <DependentUpon>ThemBuoiHoc.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

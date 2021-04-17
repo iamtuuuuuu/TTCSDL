@@ -33,6 +33,8 @@ namespace WindowsFormsApp2
             this.Visible = false;
             Form1 fquanLy = new Form1();
             fquanLy.ShowDialog();
+            //FormQLDD f = new FormQLDD();
+            //f.Show();
             this.Visible = true;
         }
 
