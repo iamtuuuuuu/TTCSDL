@@ -30,6 +30,7 @@ namespace WindowsFormsApp2
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbTongTien = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbNgayThanhToan = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@ namespace WindowsFormsApp2
             this.lbSoThangNo = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lbThangDong = new System.Windows.Forms.Label();
+            this.cbbThang = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBienLaiChiTiet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,19 +103,27 @@ namespace WindowsFormsApp2
             // dgvBienLaiChiTiet
             // 
             this.dgvBienLaiChiTiet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvBienLaiChiTiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBienLaiChiTiet.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvBienLaiChiTiet.Location = new System.Drawing.Point(330, 98);
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBienLaiChiTiet.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvBienLaiChiTiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBienLaiChiTiet.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvBienLaiChiTiet.Location = new System.Drawing.Point(330, 124);
             this.dgvBienLaiChiTiet.Name = "dgvBienLaiChiTiet";
             this.dgvBienLaiChiTiet.RowHeadersWidth = 51;
-            this.dgvBienLaiChiTiet.Size = new System.Drawing.Size(586, 197);
+            this.dgvBienLaiChiTiet.Size = new System.Drawing.Size(671, 243);
             this.dgvBienLaiChiTiet.TabIndex = 14;
             // 
             // label4
@@ -150,7 +160,7 @@ namespace WindowsFormsApp2
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(367, 29);
+            this.label1.Location = new System.Drawing.Point(443, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 24);
             this.label1.TabIndex = 10;
@@ -197,11 +207,37 @@ namespace WindowsFormsApp2
             this.lbThangDong.TabIndex = 19;
             this.lbThangDong.Text = "None";
             // 
+            // cbbThang
+            // 
+            this.cbbThang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbThang.FormattingEnabled = true;
+            this.cbbThang.Items.AddRange(new object[] {
+            "Tháng 1",
+            "Tháng 2",
+            "Tháng 3",
+            "Tháng 4",
+            "Tháng 5",
+            "Tháng 6",
+            "Tháng 7",
+            "Tháng 8",
+            "Tháng 9",
+            "Tháng 10",
+            "Tháng 11",
+            "Tháng 12"});
+            this.cbbThang.Location = new System.Drawing.Point(786, 27);
+            this.cbbThang.MaxDropDownItems = 6;
+            this.cbbThang.Name = "cbbThang";
+            this.cbbThang.Size = new System.Drawing.Size(121, 24);
+            this.cbbThang.TabIndex = 20;
+            this.cbbThang.SelectedIndexChanged += new System.EventHandler(this.cbbThang_SelectedIndexChanged);
+            // 
             // FormBienLaiHV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(946, 450);
+            this.ClientSize = new System.Drawing.Size(1053, 482);
+            this.Controls.Add(this.cbbThang);
             this.Controls.Add(this.lbSoThangNo);
             this.Controls.Add(this.lbThangDong);
             this.Controls.Add(this.lbTongTien);
@@ -217,6 +253,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormBienLaiHV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormBienLaiHV";
             this.Load += new System.EventHandler(this.FormBienLaiHV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBienLaiChiTiet)).EndInit();
@@ -241,5 +278,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label lbSoThangNo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbThangDong;
+        private System.Windows.Forms.ComboBox cbbThang;
     }
 }

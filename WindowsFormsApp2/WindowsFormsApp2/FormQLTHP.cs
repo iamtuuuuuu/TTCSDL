@@ -21,7 +21,9 @@ namespace WindowsFormsApp2
             if (e.RowIndex >= 0)
             {
                 string maHV = dgvBienLaiHP.Rows[e.RowIndex].Cells["MaHV"].Value.ToString();
-                new FormBienLaiHV(maHV).ShowDialog();
+                string[] month = dgvBienLaiHP.Rows[e.RowIndex].Cells["NgayThu"].Value.ToString().Split('/');
+                int thang = Int32.Parse(month[0]);
+                new FormBienLaiHV(maHV, thang).ShowDialog();
                 FormQLTHP_Load(sender, e);
             }
         }

@@ -45,6 +45,12 @@ namespace WindowsFormsApp2
             this.lbGioiTinh = new System.Windows.Forms.Label();
             this.radioBtnNam = new System.Windows.Forms.RadioButton();
             this.radioBtnNu = new System.Windows.Forms.RadioButton();
+            this.listBoxLopHoc = new System.Windows.Forms.ListBox();
+            this.btnChon = new System.Windows.Forms.Button();
+            this.listBoxChonLop = new System.Windows.Forms.ListBox();
+            this.lbLop = new System.Windows.Forms.Label();
+            this.btnChuyenVe = new System.Windows.Forms.Button();
+            this.lbLopTheoHoc = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txbDiaChi
@@ -66,7 +72,7 @@ namespace WindowsFormsApp2
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(387, 436);
+            this.btnThoat.Location = new System.Drawing.Point(597, 448);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(112, 41);
             this.btnThoat.TabIndex = 7;
@@ -77,7 +83,7 @@ namespace WindowsFormsApp2
             // btnLuu
             // 
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(58, 436);
+            this.btnLuu.Location = new System.Drawing.Point(268, 448);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(112, 41);
             this.btnLuu.TabIndex = 6;
@@ -203,13 +209,81 @@ namespace WindowsFormsApp2
             this.radioBtnNu.Text = "Nữ";
             this.radioBtnNu.UseVisualStyleBackColor = true;
             // 
+            // listBoxLopHoc
+            // 
+            this.listBoxLopHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxLopHoc.FormattingEnabled = true;
+            this.listBoxLopHoc.ItemHeight = 16;
+            this.listBoxLopHoc.Location = new System.Drawing.Point(604, 74);
+            this.listBoxLopHoc.Name = "listBoxLopHoc";
+            this.listBoxLopHoc.Size = new System.Drawing.Size(105, 260);
+            this.listBoxLopHoc.TabIndex = 45;
+            // 
+            // btnChon
+            // 
+            this.btnChon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChon.Location = new System.Drawing.Point(726, 143);
+            this.btnChon.Name = "btnChon";
+            this.btnChon.Size = new System.Drawing.Size(44, 34);
+            this.btnChon.TabIndex = 46;
+            this.btnChon.Text = ">";
+            this.btnChon.UseVisualStyleBackColor = true;
+            this.btnChon.Click += new System.EventHandler(this.btnChon_Click);
+            // 
+            // listBoxChonLop
+            // 
+            this.listBoxChonLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxChonLop.FormattingEnabled = true;
+            this.listBoxChonLop.ItemHeight = 16;
+            this.listBoxChonLop.Location = new System.Drawing.Point(788, 74);
+            this.listBoxChonLop.Name = "listBoxChonLop";
+            this.listBoxChonLop.Size = new System.Drawing.Size(105, 260);
+            this.listBoxChonLop.TabIndex = 47;
+            // 
+            // lbLop
+            // 
+            this.lbLop.AutoSize = true;
+            this.lbLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLop.Location = new System.Drawing.Point(601, 31);
+            this.lbLop.Name = "lbLop";
+            this.lbLop.Size = new System.Drawing.Size(110, 24);
+            this.lbLop.TabIndex = 44;
+            this.lbLop.Text = "Lớp hiện có";
+            // 
+            // btnChuyenVe
+            // 
+            this.btnChuyenVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChuyenVe.Location = new System.Drawing.Point(726, 215);
+            this.btnChuyenVe.Name = "btnChuyenVe";
+            this.btnChuyenVe.Size = new System.Drawing.Size(44, 34);
+            this.btnChuyenVe.TabIndex = 48;
+            this.btnChuyenVe.Text = "<";
+            this.btnChuyenVe.UseVisualStyleBackColor = true;
+            this.btnChuyenVe.Click += new System.EventHandler(this.btnChuyenVe_Click);
+            // 
+            // lbLopTheoHoc
+            // 
+            this.lbLopTheoHoc.AutoSize = true;
+            this.lbLopTheoHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLopTheoHoc.Location = new System.Drawing.Point(751, 31);
+            this.lbLopTheoHoc.Name = "lbLopTheoHoc";
+            this.lbLopTheoHoc.Size = new System.Drawing.Size(170, 24);
+            this.lbLopTheoHoc.TabIndex = 44;
+            this.lbLopTheoHoc.Text = "Lớp đang theo học";
+            // 
             // FormThemHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 526);
+            this.ClientSize = new System.Drawing.Size(939, 526);
+            this.Controls.Add(this.btnChuyenVe);
+            this.Controls.Add(this.listBoxChonLop);
+            this.Controls.Add(this.btnChon);
+            this.Controls.Add(this.listBoxLopHoc);
             this.Controls.Add(this.radioBtnNu);
             this.Controls.Add(this.radioBtnNam);
+            this.Controls.Add(this.lbLopTheoHoc);
+            this.Controls.Add(this.lbLop);
             this.Controls.Add(this.lbGioiTinh);
             this.Controls.Add(this.txbDiaChi);
             this.Controls.Add(this.dtPickerNgaySinh);
@@ -225,6 +299,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.lbMaHV);
             this.Controls.Add(this.label1);
             this.Name = "FormThemHocSinh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormThemHocSinh";
             this.Load += new System.EventHandler(this.FormThemHocSinh_Load);
             this.ResumeLayout(false);
@@ -250,5 +325,11 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label lbGioiTinh;
         private System.Windows.Forms.RadioButton radioBtnNam;
         private System.Windows.Forms.RadioButton radioBtnNu;
+        private System.Windows.Forms.ListBox listBoxLopHoc;
+        private System.Windows.Forms.Button btnChon;
+        private System.Windows.Forms.ListBox listBoxChonLop;
+        private System.Windows.Forms.Label lbLop;
+        private System.Windows.Forms.Button btnChuyenVe;
+        private System.Windows.Forms.Label lbLopTheoHoc;
     }
 }

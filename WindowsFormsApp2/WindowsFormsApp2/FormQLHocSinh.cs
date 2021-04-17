@@ -35,12 +35,6 @@ namespace WindowsFormsApp2
             dgvDanhSachHocVien.DataSource = new CSDL().SelectData("SELECT * FROM HocVien");
         }
 
-        private void btnThuHocPhi_Click(object sender, EventArgs e)
-        {
-            FormQLTHP f = new FormQLTHP();
-            f.Show();
-        }
-
         private void FormQLHocSinh_Load(object sender, EventArgs e)
         {
             LoadHS();
@@ -127,6 +121,12 @@ namespace WindowsFormsApp2
                 txbTimKiem_ForeColorChanged(sender, e);
                 txbTimKiem.Text = "";
             }
+        }
+
+        private void btnQuanLyHocPhi_Click(object sender, EventArgs e)
+        {
+            FormQLTHP f = new FormQLTHP();
+            f.Show();
         }
     }
 }

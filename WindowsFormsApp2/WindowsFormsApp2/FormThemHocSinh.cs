@@ -21,6 +21,12 @@ namespace WindowsFormsApp2
         }
         private void FormThemHocSinh_Load(object sender, EventArgs e)
         {
+            CSDL dl = new CSDL();
+            string getAllMaLH = "SELECT MaLH, TenLH FROM LOPHOC";
+            DataTable maLHTable = dl.SelectData(getAllMaLH);
+            listBoxLopHoc.DataSource = maLHTable.Copy();
+            listBoxLopHoc.DisplayMember = "TenLH";
+            listBoxLopHoc.ValueMember = "MaLH";
             if (string.IsNullOrEmpty(maHV))
             {
                 this.Text = "Thêm học viên";
@@ -39,6 +45,9 @@ namespace WindowsFormsApp2
                 else
                     radioBtnNu.Checked = true;
 
+                listBoxChonLop.DataSource = new CSDL().SelectData("SELECT b.MaLH, b.TenLH FROM HOCVIEN_LOPHOC a, LOPHOC b WHERE a.MaLH = b.MaLH AND a.MaHV = '" + maHV + "'");
+                listBoxChonLop.DisplayMember = "TenLH";
+                listBoxChonLop.ValueMember = "MaLH";
                 this.Text = "Chỉnh sửa thông tin học viên";
             }
         }
@@ -46,6 +55,23 @@ namespace WindowsFormsApp2
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnChon_Click(object sender, EventArgs e)
+        {
+            if (listBoxLopHoc.SelectedItem != null)
+            {
+                listBoxChonLop.Items.Add(listBoxLopHoc.SelectedItem);
+                listBoxChonLop.DisplayMember = "TenLH";
+            }
+        }
+
+        private void btnChuyenVe_Click(object sender, EventArgs e)
+        {
+            if (listBoxChonLop.SelectedItem != null)
+            {
+                listBoxChonLop.Items.Remove(listBoxChonLop.SelectedItem);
+            }
         }
     }
 }
