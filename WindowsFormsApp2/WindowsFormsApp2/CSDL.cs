@@ -11,7 +11,7 @@ namespace WindowsFormsApp2
 {
     public class CSDL
     {
-        private string connectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Quản lý trung tâm học thêm;Trusted_Connection=Yes;";
+        private string connectionString = "Data Source=LAPCUATUNG\\SQLEXPRESS;Initial Catalog=Quản lý trung tâm học thêm;Trusted_Connection=Yes;";
         private SqlConnection conn;
 
         //private string sql;
@@ -30,6 +30,28 @@ namespace WindowsFormsApp2
             }
 
         }
+
+        public DataRow Select(string sql)
+        {
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand(sql, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt.Rows[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Loading Error: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         public DataTable SelectData(string sql)
         {
             try
@@ -76,6 +98,28 @@ namespace WindowsFormsApp2
             {
                 conn.Close();
             }
+        }
+
+        public bool del_dataGV(string magv)
+        {
+            bool check = false;
+            try
+            {
+                conn.Open();
+                string sql = "DELETE From GIAOVIEN where MaGV = '" + magv + "'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+                check = true;
+                conn.Close();
+            }
+            catch (Exception)
+            {
+                check = false;
+                throw;
+            }
+
+
+            return check;
         }
     }
 }

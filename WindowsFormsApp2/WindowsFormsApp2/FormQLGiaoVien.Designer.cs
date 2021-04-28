@@ -33,21 +33,19 @@ namespace WindowsFormsApp2
             this.btnThem = new System.Windows.Forms.Button();
             this.btnTraLuong = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBoxSearch = new System.Windows.Forms.ComboBox();
+            this.txbGVThongTin = new System.Windows.Forms.TextBox();
+            this.cbbGVDanhSach = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewDanhSachGiaoVien = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSachGiaoVien)).BeginInit();
             this.SuspendLayout();
             // 
             // btnXoa
             // 
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(258, 387);
+            this.btnXoa.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Location = new System.Drawing.Point(258, 417);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(188, 46);
+            this.btnXoa.Size = new System.Drawing.Size(188, 50);
             this.btnXoa.TabIndex = 29;
             this.btnXoa.Text = "Xóa giáo viên";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -55,10 +53,10 @@ namespace WindowsFormsApp2
             // 
             // btnThem
             // 
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(44, 387);
+            this.btnThem.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Location = new System.Drawing.Point(44, 417);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(188, 46);
+            this.btnThem.Size = new System.Drawing.Size(188, 50);
             this.btnThem.TabIndex = 28;
             this.btnThem.Text = "Thêm giáo viên";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -66,10 +64,10 @@ namespace WindowsFormsApp2
             // 
             // btnTraLuong
             // 
-            this.btnTraLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTraLuong.Location = new System.Drawing.Point(480, 387);
+            this.btnTraLuong.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTraLuong.Location = new System.Drawing.Point(480, 417);
             this.btnTraLuong.Name = "btnTraLuong";
-            this.btnTraLuong.Size = new System.Drawing.Size(448, 46);
+            this.btnTraLuong.Size = new System.Drawing.Size(448, 50);
             this.btnTraLuong.TabIndex = 27;
             this.btnTraLuong.Text = "Quản lý trả lương";
             this.btnTraLuong.UseVisualStyleBackColor = true;
@@ -77,84 +75,74 @@ namespace WindowsFormsApp2
             // 
             // btnSearch
             // 
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(840, 320);
+            this.btnSearch.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(840, 345);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(88, 32);
+            this.btnSearch.Size = new System.Drawing.Size(88, 34);
             this.btnSearch.TabIndex = 26;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // textBox1
+            // txbGVThongTin
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(198, 323);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(636, 29);
-            this.textBox1.TabIndex = 25;
+            this.txbGVThongTin.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbGVThongTin.Location = new System.Drawing.Point(198, 348);
+            this.txbGVThongTin.Name = "txbGVThongTin";
+            this.txbGVThongTin.Size = new System.Drawing.Size(636, 29);
+            this.txbGVThongTin.TabIndex = 25;
             // 
-            // comboBoxSearch
+            // cbbGVDanhSach
             // 
-            this.comboBoxSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxSearch.FormattingEnabled = true;
-            this.comboBoxSearch.Items.AddRange(new object[] {
+            this.cbbGVDanhSach.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGVDanhSach.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbGVDanhSach.FormattingEnabled = true;
+            this.cbbGVDanhSach.Items.AddRange(new object[] {
             "Mã giáo viên",
             "Tên giáo viên"});
-            this.comboBoxSearch.Location = new System.Drawing.Point(46, 323);
-            this.comboBoxSearch.Name = "comboBoxSearch";
-            this.comboBoxSearch.Size = new System.Drawing.Size(133, 28);
-            this.comboBoxSearch.TabIndex = 24;
+            this.cbbGVDanhSach.Location = new System.Drawing.Point(46, 348);
+            this.cbbGVDanhSach.Name = "cbbGVDanhSach";
+            this.cbbGVDanhSach.Size = new System.Drawing.Size(133, 27);
+            this.cbbGVDanhSach.TabIndex = 24;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(413, 17);
+            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(413, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 24);
+            this.label1.Size = new System.Drawing.Size(179, 22);
             this.label1.TabIndex = 23;
             this.label1.Text = "Danh sách giáo viên";
             // 
             // dataGridViewDanhSachGiaoVien
             // 
+            this.dataGridViewDanhSachGiaoVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDanhSachGiaoVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDanhSachGiaoVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
-            this.dataGridViewDanhSachGiaoVien.Location = new System.Drawing.Point(12, 61);
+            this.dataGridViewDanhSachGiaoVien.Location = new System.Drawing.Point(12, 66);
             this.dataGridViewDanhSachGiaoVien.Name = "dataGridViewDanhSachGiaoVien";
-            this.dataGridViewDanhSachGiaoVien.Size = new System.Drawing.Size(916, 234);
+            this.dataGridViewDanhSachGiaoVien.Size = new System.Drawing.Size(916, 252);
             this.dataGridViewDanhSachGiaoVien.TabIndex = 22;
             this.dataGridViewDanhSachGiaoVien.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDanhSachGiaoVien_CellDoubleClick);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Họ tên";
-            this.Column2.Name = "Column2";
-            // 
             // FormQLGiaoVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(940, 450);
+            this.ClientSize = new System.Drawing.Size(940, 485);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnTraLuong);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBoxSearch);
+            this.Controls.Add(this.txbGVThongTin);
+            this.Controls.Add(this.cbbGVDanhSach);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewDanhSachGiaoVien);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormQLGiaoVien";
             this.Text = "FormQLGiaoVien";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormQLGiaoVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSachGiaoVien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -167,11 +155,9 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnTraLuong;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBoxSearch;
+        private System.Windows.Forms.TextBox txbGVThongTin;
+        private System.Windows.Forms.ComboBox cbbGVDanhSach;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewDanhSachGiaoVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }
