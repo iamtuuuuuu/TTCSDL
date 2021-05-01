@@ -114,6 +114,12 @@
     <Compile Include="FormQLTL.Designer.cs">
       <DependentUpon>FormQLTL.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThemBienLai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemBienLai.Designer.cs">
+      <DependentUpon>FormThemBienLai.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThemGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLTL.resx">
       <DependentUpon>FormQLTL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemBienLai.resx">
+      <DependentUpon>FormThemBienLai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemGiaoVien.resx">
       <DependentUpon>FormThemGiaoVien.cs</DependentUpon>

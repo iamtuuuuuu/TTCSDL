@@ -41,6 +41,22 @@ namespace WindowsFormsApp2
             dgvBienLaiHP.Columns["MaHV"].HeaderText = "Mã học viên";
         }
 
+        private void btnThemBL_Click(object sender, EventArgs e)
+        {
+            FormThemBienLai bl = new FormThemBienLai();
+            bl.ShowDialog();
+            LoadBLThuHP();
+        }
 
+        private void btnXoaBL_Click(object sender, EventArgs e)
+        {
+            var r = new CSDL();
+            if (MessageBox.Show("Bạn có chắc chắn xóa biên lai này không?", "Warning!!!", 
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                r.del_BLHocPhi(dgvBienLaiHP.CurrentRow.Cells["MaBL"].Value.ToString());
+            }
+            LoadBLThuHP();
+        }
     }
 }
