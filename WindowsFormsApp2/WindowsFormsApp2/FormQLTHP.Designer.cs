@@ -29,77 +29,86 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvBienLaiHP = new System.Windows.Forms.DataGridView();
+            this.btnThemBL = new System.Windows.Forms.Button();
+            this.btnXoaBL = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBienLaiHP)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvBienLaiHP
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 35);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 403);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dgvBienLaiHP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBienLaiHP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvBienLaiHP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBienLaiHP.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvBienLaiHP.Location = new System.Drawing.Point(79, 30);
+            this.dgvBienLaiHP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvBienLaiHP.Name = "dgvBienLaiHP";
+            this.dgvBienLaiHP.RowHeadersWidth = 51;
+            this.dgvBienLaiHP.Size = new System.Drawing.Size(1092, 635);
+            this.dgvBienLaiHP.TabIndex = 0;
+            this.dgvBienLaiHP.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBienLaiHP_CellDoubleClick);
             // 
-            // Column1
+            // btnThemBL
             // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
+            this.btnThemBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemBL.Location = new System.Drawing.Point(232, 688);
+            this.btnThemBL.Name = "btnThemBL";
+            this.btnThemBL.Size = new System.Drawing.Size(193, 40);
+            this.btnThemBL.TabIndex = 1;
+            this.btnThemBL.Text = "Thêm biên lai";
+            this.btnThemBL.UseVisualStyleBackColor = true;
+            this.btnThemBL.Click += new System.EventHandler(this.btnThemBL_Click);
             // 
-            // Column2
+            // btnXoaBL
             // 
-            this.Column2.HeaderText = "Mã học viên";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tên học viên";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Số lớp học";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Tổng tiền";
-            this.Column5.Name = "Column5";
+            this.btnXoaBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaBL.Location = new System.Drawing.Point(791, 688);
+            this.btnXoaBL.Name = "btnXoaBL";
+            this.btnXoaBL.Size = new System.Drawing.Size(193, 40);
+            this.btnXoaBL.TabIndex = 2;
+            this.btnXoaBL.Text = "Xóa biên lai";
+            this.btnXoaBL.UseVisualStyleBackColor = true;
+            this.btnXoaBL.Click += new System.EventHandler(this.btnXoaBL_Click);
             // 
             // FormQLTHP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1250, 764);
+            this.Controls.Add(this.btnXoaBL);
+            this.Controls.Add(this.btnThemBL);
+            this.Controls.Add(this.dgvBienLaiHP);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormQLTHP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormQLTHP";
             this.Load += new System.EventHandler(this.FormQLTHP_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBienLaiHP)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridView dgvBienLaiHP;
+        private System.Windows.Forms.Button btnThemBL;
+        private System.Windows.Forms.Button btnXoaBL;
     }
 }

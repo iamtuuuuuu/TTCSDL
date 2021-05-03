@@ -118,5 +118,65 @@ namespace WindowsFormsApp2
 
             return check;
         }
+
+        public bool del_lopHoc(string maHV, string maLop)
+        {
+            bool check = false;
+            try
+            {
+                conn.Open();
+                string sql1 = "DELETE FROM HOCVIEN_LOPHOC WHERE MaHV = '" + maHV + "' AND MaLH = '" + maLop + "'";
+                SqlCommand cmd1 = new SqlCommand(sql1, conn);
+                cmd1.ExecuteNonQuery();
+                check = true;
+                conn.Close();
+            }
+            catch
+            {
+                check = false;
+                throw;
+            }
+            return check;
+        }
+        public bool del_BLHocPhi(string maBL)
+        {
+            bool check = false;
+            try
+            {
+                conn.Open();
+                string sql1 = "DELETE FROM BIENLAITHUHOCPHI WHERE MaBL = '" + maBL + "'";
+                SqlCommand cmd1 = new SqlCommand(sql1, conn);
+                cmd1.ExecuteNonQuery();
+                check = true;
+                conn.Close();
+            }
+            catch
+            {
+                check = false;
+                throw;
+            }
+            return check;
+        }
+        public bool del_dataGV(string magv)
+        {
+            bool check = false;
+            try
+            {
+                conn.Open();
+                string sql = "DELETE From GIAOVIEN where MaGV = '" + magv + "'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+                check = true;
+                conn.Close();
+            }
+            catch (Exception)
+            {
+                check = false;
+                throw;
+            }
+
+
+            return check;
+        }
     }
 }

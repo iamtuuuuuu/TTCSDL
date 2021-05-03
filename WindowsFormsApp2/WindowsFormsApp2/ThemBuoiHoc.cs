@@ -39,14 +39,14 @@ namespace WindowsFormsApp2
             string sql = "ThemMoiBH";
             string sqlThemDD = "";
 
-            string getAllMaBH = "select MaBH from BUOIHOC where MaLH = \'" + comboBoxChonLop.Text + "\'";
-            DataTable maMHTable = csdl.SelectData(getAllMaBH);
+            //string getAllMaBH = "select MaBH from BUOIHOC where MaLH = \'" + comboBoxChonLop.Text + "\'";
+            //DataTable maMHTable = csdl.SelectData(getAllMaBH);
 
-            string motMaBHTrongLop = maMHTable.Rows[0][0].ToString();
+            //string motMaBHTrongLop = maMHTable.Rows[0][0].ToString();
 
             // table de lay du lieu them diem danh cho tat ca hoc sinh trong lop vao buoi hoc moi tao
-            string getDSHSTheoBuoi = "select * from dbo.XemDSHSTheoBuoi(\'"+ comboBoxChonLop.Text + "\', \'"+ motMaBHTrongLop + "\')";
-            DataTable dsHSTable = csdl.SelectData(getDSHSTheoBuoi);
+            string getDSHSTheoLop = "select * from HOCVIEN_LOPHOC where MaLH = \'" + comboBoxChonLop.Text + "\' ";
+            DataTable dsHSTable = csdl.SelectData(getDSHSTheoLop);
 
             string sqlGetMaBHVuaThem = "select next value for BuoiHocSeq";
             DataTable maBHVuaThemTable = csdl.SelectData(sqlGetMaBHVuaThem);
@@ -103,7 +103,7 @@ namespace WindowsFormsApp2
                     }
                     else
                     {
-                        MessageBox.Show("Thao tác không thành công");
+                        MessageBox.Show("Thao tác them diem danh không thành công");
                     }
                 }
                 MessageBox.Show("Thêm mới thành công"

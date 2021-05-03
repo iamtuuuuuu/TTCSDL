@@ -69,3 +69,6 @@ E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsForms
 E:\Thuc tap CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
 D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.SearchOutLH.resources
 D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.ThemBuoiHoc.resources
+D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.SearchOutHV.resources
+D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormThemBienLai.resources
+D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.SearchOutGV.resources

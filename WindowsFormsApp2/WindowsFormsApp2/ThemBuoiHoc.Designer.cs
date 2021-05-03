@@ -55,9 +55,9 @@ namespace WindowsFormsApp2
             "Tháng 10",
             "Tháng 11",
             "Tháng 12"});
-            this.comboBoxChonLop.Location = new System.Drawing.Point(30, 61);
+            this.comboBoxChonLop.Location = new System.Drawing.Point(30, 49);
             this.comboBoxChonLop.Name = "comboBoxChonLop";
-            this.comboBoxChonLop.Size = new System.Drawing.Size(121, 28);
+            this.comboBoxChonLop.Size = new System.Drawing.Size(301, 28);
             this.comboBoxChonLop.TabIndex = 8;
             // 
             // label1
@@ -73,16 +73,16 @@ namespace WindowsFormsApp2
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(25, 180);
+            this.dateTimePicker1.Location = new System.Drawing.Point(30, 126);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(333, 29);
+            this.dateTimePicker1.Size = new System.Drawing.Size(301, 29);
             this.dateTimePicker1.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 144);
+            this.label2.Location = new System.Drawing.Point(31, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 20);
             this.label2.TabIndex = 11;
@@ -91,7 +91,7 @@ namespace WindowsFormsApp2
             // btnLuu
             // 
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(294, 267);
+            this.btnLuu.Location = new System.Drawing.Point(226, 204);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(105, 36);
             this.btnLuu.TabIndex = 12;
@@ -102,7 +102,7 @@ namespace WindowsFormsApp2
             // btnHuy
             // 
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(25, 267);
+            this.btnHuy.Location = new System.Drawing.Point(30, 204);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(105, 36);
             this.btnHuy.TabIndex = 13;
@@ -113,7 +113,7 @@ namespace WindowsFormsApp2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 352);
+            this.ClientSize = new System.Drawing.Size(369, 289);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.label2);
@@ -121,6 +121,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxChonLop);
             this.Name = "ThemBuoiHoc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ThemBuoiHoc";
             this.Load += new System.EventHandler(this.ThemBuoiHoc_Load);
             this.ResumeLayout(false);

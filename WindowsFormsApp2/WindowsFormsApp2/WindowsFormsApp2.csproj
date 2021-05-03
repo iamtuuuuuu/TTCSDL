@@ -57,13 +57,13 @@
     <Compile Include="FormBienLaiGV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBienLaiGV.Designer.cs">
+    <Compile Include="FormBienLaiGV.designer.cs">
       <DependentUpon>FormBienLaiGV.cs</DependentUpon>
     </Compile>
     <Compile Include="FormBienLaiHV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBienLaiHV.Designer.cs">
+    <Compile Include="FormBienLaiHV.designer.cs">
       <DependentUpon>FormBienLaiHV.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDoiMatKhau.cs">
@@ -87,13 +87,13 @@
     <Compile Include="FormQLGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormQLGiaoVien.Designer.cs">
+    <Compile Include="FormQLGiaoVien.designer.cs">
       <DependentUpon>FormQLGiaoVien.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQLHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormQLHocSinh.Designer.cs">
+    <Compile Include="FormQLHocSinh.designer.cs">
       <DependentUpon>FormQLHocSinh.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQLLopHoc.cs">
@@ -105,25 +105,31 @@
     <Compile Include="FormQLTHP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormQLTHP.Designer.cs">
+    <Compile Include="FormQLTHP.designer.cs">
       <DependentUpon>FormQLTHP.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQLTL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormQLTL.Designer.cs">
+    <Compile Include="FormQLTL.designer.cs">
       <DependentUpon>FormQLTL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThemBienLai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemBienLai.designer.cs">
+      <DependentUpon>FormThemBienLai.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThemGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormThemGiaoVien.Designer.cs">
+    <Compile Include="FormThemGiaoVien.designer.cs">
       <DependentUpon>FormThemGiaoVien.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThemHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormThemHocSinh.Designer.cs">
+    <Compile Include="FormThemHocSinh.designer.cs">
       <DependentUpon>FormThemHocSinh.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThemLopHoc.cs">
@@ -134,6 +140,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchOutGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchOutGV.designer.cs">
+      <DependentUpon>SearchOutGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchOutHV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchOutHV.designer.cs">
+      <DependentUpon>SearchOutHV.cs</DependentUpon>
+    </Compile>
     <Compile Include="SearchOutLH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +197,9 @@
     <EmbeddedResource Include="FormQLTL.resx">
       <DependentUpon>FormQLTL.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormThemBienLai.resx">
+      <DependentUpon>FormThemBienLai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormThemGiaoVien.resx">
       <DependentUpon>FormThemGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +218,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SearchOutGV.resx">
+      <DependentUpon>SearchOutGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchOutHV.resx">
+      <DependentUpon>SearchOutHV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SearchOutLH.resx">
       <DependentUpon>SearchOutLH.cs</DependentUpon>
     </EmbeddedResource>

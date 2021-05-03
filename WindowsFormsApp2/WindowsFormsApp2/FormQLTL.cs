@@ -19,10 +19,19 @@ namespace WindowsFormsApp2
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            new FormBienLaiGV(null).ShowDialog();
+            var magv = dataGridView1.CurrentRow.Cells["MaGV"].Value.ToString();
+
+            var data = new CSDL().Select("select * from bienlaitraluong where magv='" + magv + "'");
+
+            new FormBienLaiGV(data).ShowDialog();
         }
 
         private void FormQLTL_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = new CSDL().SelectData("select * from bienlaitraluong");
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
