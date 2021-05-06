@@ -35,5 +35,16 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void reload()
+        {
+            dataGridView1.DataSource = new CSDL().SelectData("select * from bienlaitraluong");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new FormThemBL().ShowDialog();
+            reload();
+        }
     }
 }

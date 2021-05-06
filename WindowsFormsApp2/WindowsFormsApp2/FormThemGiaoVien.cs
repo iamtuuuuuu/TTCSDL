@@ -53,7 +53,6 @@ namespace WindowsFormsApp2
                 comboBoxMaMucThanhToan.ValueMember = "MaMTT";
 
 
-                textBoxMaGiaoVien.Text = r["MaGV"].ToString();
                 textBoxHoTen.Text = r["HoTen"].ToString();
                 textBoxSDT.Text = r["SDT"].ToString();
                 dateTimePickerNgaySinh.Value = (DateTime)r["NgaySinh"];
@@ -92,7 +91,6 @@ namespace WindowsFormsApp2
         {
             string sql;
 
-            string Magv = textBoxMaGiaoVien.Text;
             string HoTen = textBoxHoTen.Text;
             string sdt = textBoxSDT.Text;
             string GioiTinh = radioNam.Checked ? "Nam" : "Nữ";
@@ -107,17 +105,6 @@ namespace WindowsFormsApp2
             if (string.IsNullOrEmpty(magv))
             {
                 sql = "ThemMoiGV";
-            }
-            else
-            {
-                sql = "UpdateGiaoVien";
-                
-            }
-                lstPara.Add(new CustomParameter()
-                {
-                    key = "@Magv",
-                    value = Magv
-                });
                 lstPara.Add(new CustomParameter()
                 {
                     key = "@HoTen",
@@ -152,7 +139,56 @@ namespace WindowsFormsApp2
                     key = "@MaMTT",
                     value = MaMTT
                 });
-            
+
+            }
+            else
+            {
+                sql = "UpdateGiaoVien";
+                lstPara.Add(new CustomParameter()
+                {
+                    key = "@MaGV",
+                    value = magv
+                }) ;
+
+                lstPara.Add(new CustomParameter()
+                {
+                    key = "@HoTen",
+                    value = HoTen
+                });
+                lstPara.Add(new CustomParameter()
+                {
+                    key = "@SDT",
+                    value = sdt
+                });
+
+                lstPara.Add(new CustomParameter()
+                {
+                    key = "@NgaySinh",
+                    value = NgaySinh.ToString()
+                });
+
+                lstPara.Add(new CustomParameter()
+                {
+                    key = "@DiaChi",
+                    value = DiaChi
+                });
+
+                lstPara.Add(new CustomParameter()
+                {
+                    key = "@GioiTinh",
+                    value = GioiTinh
+                });
+
+                lstPara.Add(new CustomParameter()
+                {
+                    key = "@MaMTT",
+                    value = MaMTT
+                });
+
+
+            }
+
+
 
             var rs = new CSDL().ExeCute(sql, lstPara);
             if (rs == 1)

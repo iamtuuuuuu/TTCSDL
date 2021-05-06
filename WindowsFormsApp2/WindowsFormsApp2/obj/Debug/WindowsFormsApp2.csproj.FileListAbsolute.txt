@@ -91,3 +91,4 @@ C:\Users\HP\Desktop\GIT\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\Windo
 C:\Users\HP\Desktop\GIT\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\HP\Desktop\GIT\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
 C:\Users\HP\Desktop\GIT\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.SearchOutGV.resources
+C:\Users\HP\Desktop\GIT\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormThemBL.resources
