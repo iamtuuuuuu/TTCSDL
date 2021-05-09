@@ -120,6 +120,10 @@
     <Compile Include="FormThemBienLai.designer.cs">
       <DependentUpon>FormThemBienLai.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThemBL.cs" />
+    <Compile Include="FormThemBL.designer.cs">
+      <DependentUpon>FormThemBL.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThemGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemBienLai.resx">
       <DependentUpon>FormThemBienLai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemBL.resx">
+      <DependentUpon>FormThemBL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemGiaoVien.resx">
       <DependentUpon>FormThemGiaoVien.cs</DependentUpon>

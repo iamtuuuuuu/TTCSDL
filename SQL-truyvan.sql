@@ -128,7 +128,7 @@ create FUNCTION TESTXemBuoiHoc( @malop char(10), @start varchar(50), @end varcha
 RETURNS TABLE
 AS
 	RETURN (
-		SELECT hv.HoTen, bh.MaBH, bh.MaLH, dd.CoTrenLop, bh.ThoiGian
+		SELECT hv.MaHV, hv.HoTen, bh.MaBH, bh.MaLH, dd.CoTrenLop, bh.ThoiGian
 		FROM HOCVIEN hv, DIEMDANH dd, BUOIHOC bh
 		WHERE hv.MaHV = dd.MaHV and bh.MaBH = dd.MaBH and bh.MaLH = @malop
 		and bh.ThoiGian BETWEEN @start AND @end 

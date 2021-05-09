@@ -72,3 +72,4 @@ D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Th
 D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.SearchOutHV.resources
 D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormThemBienLai.resources
 D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.SearchOutGV.resources
+D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormThemBL.resources

@@ -38,8 +38,6 @@ namespace WindowsFormsApp2
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxHoTen = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxMaGiaoVien = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePickerNgaySinh = new System.Windows.Forms.DateTimePicker();
@@ -52,9 +50,9 @@ namespace WindowsFormsApp2
             // buttonThoat
             // 
             this.buttonThoat.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThoat.Location = new System.Drawing.Point(29, 468);
+            this.buttonThoat.Location = new System.Drawing.Point(29, 435);
             this.buttonThoat.Name = "buttonThoat";
-            this.buttonThoat.Size = new System.Drawing.Size(112, 44);
+            this.buttonThoat.Size = new System.Drawing.Size(112, 41);
             this.buttonThoat.TabIndex = 25;
             this.buttonThoat.Text = "Thoát";
             this.buttonThoat.UseVisualStyleBackColor = true;
@@ -63,9 +61,9 @@ namespace WindowsFormsApp2
             // buttonLuu
             // 
             this.buttonLuu.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLuu.Location = new System.Drawing.Point(420, 468);
+            this.buttonLuu.Location = new System.Drawing.Point(420, 435);
             this.buttonLuu.Name = "buttonLuu";
-            this.buttonLuu.Size = new System.Drawing.Size(112, 44);
+            this.buttonLuu.Size = new System.Drawing.Size(112, 41);
             this.buttonLuu.TabIndex = 24;
             this.buttonLuu.Text = "Lưu";
             this.buttonLuu.UseVisualStyleBackColor = true;
@@ -75,7 +73,7 @@ namespace WindowsFormsApp2
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(26, 364);
+            this.label6.Location = new System.Drawing.Point(26, 301);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 22);
             this.label6.TabIndex = 23;
@@ -85,7 +83,7 @@ namespace WindowsFormsApp2
             // 
             this.comboBoxMaMucThanhToan.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxMaMucThanhToan.FormattingEnabled = true;
-            this.comboBoxMaMucThanhToan.Location = new System.Drawing.Point(214, 418);
+            this.comboBoxMaMucThanhToan.Location = new System.Drawing.Point(214, 351);
             this.comboBoxMaMucThanhToan.Name = "comboBoxMaMucThanhToan";
             this.comboBoxMaMucThanhToan.Size = new System.Drawing.Size(318, 30);
             this.comboBoxMaMucThanhToan.TabIndex = 22;
@@ -94,7 +92,7 @@ namespace WindowsFormsApp2
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(24, 293);
+            this.label5.Location = new System.Drawing.Point(24, 235);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 22);
             this.label5.TabIndex = 21;
@@ -103,7 +101,7 @@ namespace WindowsFormsApp2
             // textBoxSDT
             // 
             this.textBoxSDT.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSDT.Location = new System.Drawing.Point(214, 238);
+            this.textBoxSDT.Location = new System.Drawing.Point(214, 184);
             this.textBoxSDT.Name = "textBoxSDT";
             this.textBoxSDT.Size = new System.Drawing.Size(318, 29);
             this.textBoxSDT.TabIndex = 19;
@@ -112,7 +110,7 @@ namespace WindowsFormsApp2
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(26, 238);
+            this.label4.Location = new System.Drawing.Point(26, 184);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 22);
             this.label4.TabIndex = 18;
@@ -121,7 +119,7 @@ namespace WindowsFormsApp2
             // textBoxHoTen
             // 
             this.textBoxHoTen.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHoTen.Location = new System.Drawing.Point(214, 132);
+            this.textBoxHoTen.Location = new System.Drawing.Point(214, 86);
             this.textBoxHoTen.Name = "textBoxHoTen";
             this.textBoxHoTen.Size = new System.Drawing.Size(318, 29);
             this.textBoxHoTen.TabIndex = 17;
@@ -130,35 +128,17 @@ namespace WindowsFormsApp2
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 136);
+            this.label3.Location = new System.Drawing.Point(26, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 22);
             this.label3.TabIndex = 16;
             this.label3.Text = "Họ tên";
             // 
-            // textBoxMaGiaoVien
-            // 
-            this.textBoxMaGiaoVien.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMaGiaoVien.Location = new System.Drawing.Point(214, 73);
-            this.textBoxMaGiaoVien.Name = "textBoxMaGiaoVien";
-            this.textBoxMaGiaoVien.Size = new System.Drawing.Size(318, 29);
-            this.textBoxMaGiaoVien.TabIndex = 15;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 22);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Mã giáo viên";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(190, 27);
+            this.label1.Location = new System.Drawing.Point(190, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(173, 22);
             this.label1.TabIndex = 13;
@@ -168,7 +148,7 @@ namespace WindowsFormsApp2
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(26, 426);
+            this.label7.Location = new System.Drawing.Point(26, 359);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(170, 22);
             this.label7.TabIndex = 26;
@@ -177,7 +157,7 @@ namespace WindowsFormsApp2
             // dateTimePickerNgaySinh
             // 
             this.dateTimePickerNgaySinh.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerNgaySinh.Location = new System.Drawing.Point(214, 293);
+            this.dateTimePickerNgaySinh.Location = new System.Drawing.Point(214, 235);
             this.dateTimePickerNgaySinh.Name = "dateTimePickerNgaySinh";
             this.dateTimePickerNgaySinh.Size = new System.Drawing.Size(318, 29);
             this.dateTimePickerNgaySinh.TabIndex = 27;
@@ -185,7 +165,7 @@ namespace WindowsFormsApp2
             // textBoxDiaChi
             // 
             this.textBoxDiaChi.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDiaChi.Location = new System.Drawing.Point(214, 357);
+            this.textBoxDiaChi.Location = new System.Drawing.Point(214, 294);
             this.textBoxDiaChi.Name = "textBoxDiaChi";
             this.textBoxDiaChi.Size = new System.Drawing.Size(318, 29);
             this.textBoxDiaChi.TabIndex = 28;
@@ -194,7 +174,7 @@ namespace WindowsFormsApp2
             // 
             this.radioNam.AutoSize = true;
             this.radioNam.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioNam.Location = new System.Drawing.Point(214, 187);
+            this.radioNam.Location = new System.Drawing.Point(214, 137);
             this.radioNam.Name = "radioNam";
             this.radioNam.Size = new System.Drawing.Size(67, 26);
             this.radioNam.TabIndex = 29;
@@ -207,7 +187,7 @@ namespace WindowsFormsApp2
             // 
             this.radioNu.AutoSize = true;
             this.radioNu.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioNu.Location = new System.Drawing.Point(379, 187);
+            this.radioNu.Location = new System.Drawing.Point(379, 137);
             this.radioNu.Name = "radioNu";
             this.radioNu.Size = new System.Drawing.Size(54, 26);
             this.radioNu.TabIndex = 30;
@@ -219,7 +199,7 @@ namespace WindowsFormsApp2
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(26, 187);
+            this.label8.Location = new System.Drawing.Point(26, 137);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(81, 22);
             this.label8.TabIndex = 31;
@@ -227,9 +207,9 @@ namespace WindowsFormsApp2
             // 
             // FormThemGiaoVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 537);
+            this.ClientSize = new System.Drawing.Size(554, 499);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.radioNu);
             this.Controls.Add(this.radioNam);
@@ -245,8 +225,6 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxHoTen);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxMaGiaoVien);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormThemGiaoVien";
             this.Text = "FormThemGiaoVien";
@@ -267,8 +245,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxHoTen;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxMaGiaoVien;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgaySinh;
