@@ -114,13 +114,10 @@ namespace WindowsFormsApp2
 
 
                 var rs = new CSDL().ExeCute(sql, lstPara);
-                if (rs == 1)
+                if (rs == 0)
                 {
                     //MessageBox.Show("Cập nhật thành công");
                     //this.buttonLoad.PerformClick();
-                }
-                else
-                {
                     MessageBox.Show("Thao tác không thành công");
                 }
             }

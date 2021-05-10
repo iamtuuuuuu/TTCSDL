@@ -21,8 +21,9 @@ namespace WindowsFormsApp2
             if (e.RowIndex >= 0)
             {
                 string maHV = dgvBienLaiHP.Rows[e.RowIndex].Cells["MaHV"].Value.ToString();
-                string[] month = dgvBienLaiHP.Rows[e.RowIndex].Cells["NgayThu"].Value.ToString().Split('/');
-                int thang = Int32.Parse(month[0]);
+                //string[] month = dgvBienLaiHP.Rows[e.RowIndex].Cells["NgayThu"].Value.ToString().Split('/');
+                //int thang = Int32.Parse(month[0]);
+                int thang = Int32.Parse(dgvBienLaiHP.Rows[e.RowIndex].Cells["Thang"].Value.ToString());
                 new FormBienLaiHV(maHV, thang).ShowDialog();
                 FormQLTHP_Load(sender, e);
             }
@@ -39,6 +40,7 @@ namespace WindowsFormsApp2
             dgvBienLaiHP.Columns["NgayThu"].HeaderText = "Ngày thu";
             dgvBienLaiHP.Columns["TongTien"].HeaderText = "Tổng tiền";
             dgvBienLaiHP.Columns["MaHV"].HeaderText = "Mã học viên";
+            dgvBienLaiHP.Columns["Thang"].HeaderText = "Tháng";
         }
 
         private void btnThemBL_Click(object sender, EventArgs e)

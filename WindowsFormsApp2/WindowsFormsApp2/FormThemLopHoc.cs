@@ -61,9 +61,9 @@ namespace WindowsFormsApp2
                 Console.WriteLine(maMucHocPhi);
                 comboBoxMaMHP.SelectedValue = maMucHocPhi;
                 string maMonHoc = r["MaMH"].ToString();
-                comboBoxMaMHP.SelectedValue = maMonHoc;
+                comboBoxMaMonHoc.SelectedValue = maMonHoc;
                 string maGiaoVien = r["MaGV"].ToString();
-                comboBoxMaMHP.SelectedValue = maGiaoVien;
+                comboBoxMaGiaoVien.SelectedValue = maGiaoVien;
             }
         }
 

@@ -146,7 +146,7 @@ AS
 	)
 go
 
-
+--Đã kết hợp
 create procedure [dbo].[UpdateDD]
 	@MaBH char(10),
 	@MaHV char(6),
@@ -157,7 +157,7 @@ begin
 	set 			
 		CoTrenLop = @CoTrenLop
 	where MaBH = @MaBH and MaHV = @MaHV;
-
+	EXEC UpdateBienLaiThuHP @MaHV;
 		if @@ROWCOUNT > 0 begin return 1 end
 		else begin return 0 end;
 end
@@ -335,7 +335,6 @@ BEGIN
 DECLARE @TempTable table (malop varchar(10),
     sobuoi float(10),
     sotien float(20))
-
 
 
 Begin
@@ -742,7 +741,7 @@ BEGIN
 END
 --DROP PROC WatchBLDetail
 go
-EXEC WatchBLDetail 'HV0001', 9
+EXEC WatchBLDetail 'HV0010', 9
 
 GO
 CREATE PROCEDURE SelectBienLaiHPByMaHVAndThang (@MaHV CHAR(6), @Thang INT)
@@ -754,7 +753,7 @@ BEGIN
 END
 --DROP PROC SelectBienLaiHPByMaHV
 go
-EXEC SelectBienLaiHPByMaHVAndThang 'HV0001', 9
+EXEC SelectBienLaiHPByMaHVAndThang 'HV0010', 9
 
 GO
 CREATE PROCEDURE searchMaHV (@MaHV CHAR(6))

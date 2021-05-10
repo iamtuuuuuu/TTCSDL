@@ -42,6 +42,60 @@ namespace WindowsFormsApp2
 
             if (dgvBienLaiChiTiet.Rows.Count != 1)
             {
+                var checkdb = new CSDL().SelectData(string.Format("SelectBienLaiHPByMaHVAndThang '" + maHV + "', " + a));
+                if (checkdb.Rows.Count == 0)
+                {
+                    string sql = "ThemBienLai";
+                    string maBL;
+                    if (a < 10)
+                    {
+                        maBL = "BL200" + a.ToString() + maHV.Substring(maHV.Length - 2, 2) + "01";
+                    }
+                    else
+                    {
+                        maBL = "BL20" + a.ToString() + maHV.Substring(maHV.Length - 2, 2) + "01";
+                    }
+                    int countingDay = DateTime.DaysInMonth(2020, a);
+                    DateTime ngayThu = new DateTime(2020, a, countingDay);
+                    int thang = a;
+                    int tongTien = 0;
+                    List<CustomParameter> lstPara = new List<CustomParameter>();
+
+                    lstPara.Add(new CustomParameter()
+                    {
+                        key = "@MaBL",
+                        value = maBL
+                    });
+
+                    lstPara.Add(new CustomParameter()
+                    {
+                        key = "@MaHV",
+                        value = maHV
+                    });
+
+                    lstPara.Add(new CustomParameter()
+                    {
+                        key = "@NgayThu",
+                        value = ngayThu.ToString("yyyy-MM-dd")
+                    });
+
+                    lstPara.Add(new CustomParameter()
+                    {
+                        key = "@Thang",
+                        value = thang.ToString()
+                    });
+
+                    lstPara.Add(new CustomParameter()
+                    {
+                        key = "@TongTien",
+                        value = tongTien.ToString()
+                    });
+
+                    var rs = new CSDL().ExeCute(sql, lstPara);
+                    if (rs == 0)
+                        MessageBox.Show("Xem không thành công");
+                }
+
                 var r = new CSDL().Select(string.Format("SelectBienLaiHPByMaHVAndThang '" + maHV + "', " + a));
                 lbMaHV.Text = r["MaHV"].ToString();
                 lbHoTen.Text = r["HoTen"].ToString();
