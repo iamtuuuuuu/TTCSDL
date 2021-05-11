@@ -147,7 +147,7 @@ AS
 go
 
 --Đã kết hợp
-create procedure [dbo].[UpdateDD]
+alter procedure [dbo].[UpdateDD]
 	@MaBH char(10),
 	@MaHV char(6),
 	@CoTrenLop bit
@@ -817,6 +817,21 @@ BEGIN
 		GioiTinh = @GioiTinh
 	WHERE MaHV = @MaHV
 END
+---------------login
+go
+alter table GIAOVIEN 
+	add pass nvarchar(20)
+
+go
+
+create procedure checkLogin
+	@username nvarchar(20),
+	@pass nvarchar(20)
+as 
+begin
+	IF EXISTS (SELECT * FROM GIAOVIEN WHERE GIAOVIEN.SDT = @username AND GIAOVIEN.pass = @pass) begin return 1 end
+		else begin return 0 end;
+end
 
 
 

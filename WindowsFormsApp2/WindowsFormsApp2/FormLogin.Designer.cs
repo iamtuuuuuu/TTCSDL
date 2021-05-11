@@ -52,13 +52,13 @@ namespace WindowsFormsApp2
             this.txbTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbTaiKhoan.Location = new System.Drawing.Point(229, 73);
             this.txbTaiKhoan.Name = "txbTaiKhoan";
-            this.txbTaiKhoan.Size = new System.Drawing.Size(269, 31);
+            this.txbTaiKhoan.Size = new System.Drawing.Size(303, 31);
             this.txbTaiKhoan.TabIndex = 1;
             // 
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(396, 233);
+            this.btnThoat.Location = new System.Drawing.Point(99, 220);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(136, 40);
             this.btnThoat.TabIndex = 4;
@@ -71,7 +71,7 @@ namespace WindowsFormsApp2
             this.txbMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbMatKhau.Location = new System.Drawing.Point(229, 141);
             this.txbMatKhau.Name = "txbMatKhau";
-            this.txbMatKhau.Size = new System.Drawing.Size(269, 31);
+            this.txbMatKhau.Size = new System.Drawing.Size(303, 31);
             this.txbMatKhau.TabIndex = 2;
             this.txbMatKhau.UseSystemPasswordChar = true;
             // 
@@ -88,7 +88,7 @@ namespace WindowsFormsApp2
             // btnDangNhap
             // 
             this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.Location = new System.Drawing.Point(128, 233);
+            this.btnDangNhap.Location = new System.Drawing.Point(396, 220);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(136, 40);
             this.btnDangNhap.TabIndex = 3;

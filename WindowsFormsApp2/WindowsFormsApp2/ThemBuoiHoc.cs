@@ -12,19 +12,37 @@ namespace WindowsFormsApp2
 {
     public partial class ThemBuoiHoc : Form
     {
+        string maGvFromLogin;
         public ThemBuoiHoc()
         {
+            InitializeComponent();
+        }
+
+        public ThemBuoiHoc(string maGvFromLogin)
+        {
+            this.maGvFromLogin = maGvFromLogin;
             InitializeComponent();
         }
 
         private void ThemBuoiHoc_Load(object sender, EventArgs e)
         {
             CSDL csdl = new CSDL();
-            string getAllMaLH = "SELECT MaLH FROM LOPHOC";
-            DataTable maLHTable = csdl.SelectData(getAllMaLH);
-            comboBoxChonLop.DataSource = maLHTable.Copy();
-            comboBoxChonLop.DisplayMember = "MaLH";
-            comboBoxChonLop.ValueMember = "MaLH";
+            if (maGvFromLogin != null)
+            {
+                string getAllMaLH = "select * from LOPHOC where MaGV = \'" + maGvFromLogin + "\'";
+                DataTable maLHTable = csdl.SelectData(getAllMaLH);
+                comboBoxChonLop.DataSource = maLHTable.Copy();
+                comboBoxChonLop.DisplayMember = "MaLH";
+                comboBoxChonLop.ValueMember = "MaLH";
+            }
+            else
+            {
+                string getAllMaLH = "SELECT MaLH FROM LOPHOC";
+                DataTable maLHTable = csdl.SelectData(getAllMaLH);
+                comboBoxChonLop.DataSource = maLHTable.Copy();
+                comboBoxChonLop.DisplayMember = "MaLH";
+                comboBoxChonLop.ValueMember = "MaLH";
+            }
 
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "MM/dd/yyyy hh:mm:ss tt";

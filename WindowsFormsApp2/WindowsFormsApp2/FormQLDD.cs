@@ -12,10 +12,19 @@ namespace WindowsFormsApp2
 {
     public partial class FormQLDD : Form
     {
+        string maGvFromLogin;
         public FormQLDD()
         {
             InitializeComponent();
         }
+
+        public FormQLDD(string maGvFromLogin)
+        {
+            this.maGvFromLogin = maGvFromLogin;
+            InitializeComponent();
+        }
+
+
 
         // Thang 9 => '2020-9-01 00:00:00', '2020-10-01 00:00:00'
         private string Map(string a)
@@ -37,14 +46,26 @@ namespace WindowsFormsApp2
         private void FormQLDD_Load(object sender, EventArgs e)
         {
             CSDL csdl = new CSDL();
-            string getAllMaLH = "SELECT MaLH FROM LOPHOC";
-            DataTable maLHTable = csdl.SelectData(getAllMaLH);
-            comboBoxChonLop.DataSource = maLHTable.Copy();
-            comboBoxChonLop.DisplayMember = "MaLH";
-            comboBoxChonLop.ValueMember = "MaLH";
+            if(maGvFromLogin != null)
+            {
+                string getAllMaLH = "select * from LOPHOC where MaGV = \'" + maGvFromLogin + "\'";
+                DataTable maLHTable = csdl.SelectData(getAllMaLH);
+                comboBoxChonLop.DataSource = maLHTable.Copy();
+                comboBoxChonLop.DisplayMember = "MaLH";
+                comboBoxChonLop.ValueMember = "MaLH";                
+                comboBoxChonThang.SelectedIndex = 8;
+            } else
+            {
+                string getAllMaLH = "SELECT MaLH FROM LOPHOC";
+                DataTable maLHTable = csdl.SelectData(getAllMaLH);
+                comboBoxChonLop.DataSource = maLHTable.Copy();
+                comboBoxChonLop.DisplayMember = "MaLH";
+                comboBoxChonLop.ValueMember = "MaLH";
 
-            comboBoxChonLop.SelectedIndex = 7;
-            comboBoxChonThang.SelectedIndex = 8;
+                comboBoxChonLop.SelectedIndex = 7;
+                comboBoxChonThang.SelectedIndex = 8;
+            }
+            
 
             textBoxSearch.Text = "Nhập tên học sinh...";
         }
@@ -141,7 +162,7 @@ namespace WindowsFormsApp2
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            new ThemBuoiHoc().ShowDialog();
+            new ThemBuoiHoc(maGvFromLogin).ShowDialog();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
