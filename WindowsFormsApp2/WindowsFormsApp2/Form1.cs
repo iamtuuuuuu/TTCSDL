@@ -38,11 +38,6 @@ namespace WindowsFormsApp2
             QuanLyLopHocToolStripMenuItem.BackColor = Color.LightGray;
             HuongDanToolStripMenuItem.BackColor = Color.LightGray;
         }
-        private void DoiMatKhauToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormDoiMatKhau f = new FormDoiMatKhau();
-            AddForm(f);
-        }
 
         private void ThoatToolStripMenuItem_Click(object sender, EventArgs e)
         {

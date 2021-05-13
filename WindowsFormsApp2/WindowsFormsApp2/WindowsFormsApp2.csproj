@@ -66,12 +66,6 @@
     <Compile Include="FormBienLaiHV.designer.cs">
       <DependentUpon>FormBienLaiHV.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDoiMatKhau.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDoiMatKhau.Designer.cs">
-      <DependentUpon>FormDoiMatKhau.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,9 +170,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBienLaiHV.resx">
       <DependentUpon>FormBienLaiHV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDoiMatKhau.resx">
-      <DependentUpon>FormDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
