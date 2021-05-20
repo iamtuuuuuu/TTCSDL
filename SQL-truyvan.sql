@@ -493,7 +493,9 @@ ALTER procedure [dbo].[UpdateGiaoVien]
 	@NgaySinh datetime,
 	@DiaChi nvarchar(45),	
 	@GioiTinh nvarchar(5),
-	@MaMTT char(10)
+	@MaMTT char(10),
+	
+	@pass nvarchar(10)
 as 
 begin
 	update GIAOVIEN
@@ -503,7 +505,9 @@ begin
 		NgaySinh = @NgaySinh,
 		DiaChi = @DiaChi,
 		GioiTinh = @GioiTinh,
-		MaMTT=@MaMTT
+		MaMTT=@MaMTT,
+		pass=@pass
+
 
 	where MaGV = @MaGV;
 
@@ -511,8 +515,6 @@ begin
 		else begin return 0 end;
 
 end
-
-go
 create sequence giaovienSeq
 	start with 1000 --bat dau tu 1000
 	increment by 1; --moi lan tang 1 don vi
@@ -524,13 +526,14 @@ ALTER procedure [dbo].[ThemMoiGV]
 	@NgaySinh date,
 	@DiaChi nvarchar(50),
 	@GioiTinh nvarchar(50),
-	@MaMTT char(10)
+	@MaMTT char(10),
+	@pass nvarchar(10)
 
 as 
 begin
 	insert into GIAOVIEN
 	(
-		MaGV,HoTen,sdt,NgaySinh,DiaChi,GioiTinh,MaMTT
+		MaGV,HoTen,sdt,NgaySinh,DiaChi,GioiTinh,MaMTT,pass
 	)values(
 		'GV' + cast(next value for giaovienSeq as char(10)),
 		@HoTen,
@@ -538,13 +541,13 @@ begin
 		@NgaySinh,
 		@DiaChi,
 		@GioiTinh,
-		@MaMTT
+		@MaMTT,
+		@pass
 		);
 
 		if @@ROWCOUNT > 0 begin return 1 end
 		else begin return 0 end;
 end
-
 
 go
 
