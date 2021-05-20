@@ -44,7 +44,7 @@ namespace WindowsFormsApp2
                 var r = new CSDL().Select(string.Format("SelectGVById '" + magv + "'"));
 
 
-                
+
 
                 string getAllMTT = "SELECT mtt.MaMTT  FROM MucThanhToan mtt";
                 DataTable maMTTTable = csdl.SelectData(getAllMTT);
@@ -56,8 +56,8 @@ namespace WindowsFormsApp2
                 textBoxHoTen.Text = r["HoTen"].ToString();
                 textBoxSDT.Text = r["SDT"].ToString();
                 dateTimePickerNgaySinh.Value = (DateTime)r["NgaySinh"];
-                textBoxDiaChi.Text =r["DiaChi"].ToString();
-
+                textBoxDiaChi.Text = r["DiaChi"].ToString();
+                txtPass.Text = r["pass"].ToString();
 
 
                 if (r["GioiTinh"].ToString() == "Nam")
@@ -99,11 +99,17 @@ namespace WindowsFormsApp2
             string DiaChi = textBoxDiaChi.Text;
             string MaMTT = comboBoxMaMucThanhToan.Text;
 
+            string pass = txtPass.Text;
 
+
+
+            sql = "";
             List<CustomParameter> lstPara = new List<CustomParameter>();
 
             if (string.IsNullOrEmpty(magv))
             {
+
+
                 sql = "ThemMoiGV";
                 lstPara.Add(new CustomParameter()
                 {
@@ -140,6 +146,12 @@ namespace WindowsFormsApp2
                     value = MaMTT
                 });
 
+                lstPara.Add(new CustomParameter()
+                {
+                    key = "@pass",
+                    value = pass
+                });
+
             }
             else
             {
@@ -148,7 +160,7 @@ namespace WindowsFormsApp2
                 {
                     key = "@MaGV",
                     value = magv
-                }) ;
+                });
 
                 lstPara.Add(new CustomParameter()
                 {
@@ -184,32 +196,50 @@ namespace WindowsFormsApp2
                     key = "@MaMTT",
                     value = MaMTT
                 });
+                lstPara.Add(new CustomParameter()
+                {
+                    key = "@pass",
+                    value = pass
+                });
 
 
             }
 
-
-
-            var rs = new CSDL().ExeCute(sql, lstPara);
-            if (rs == 1)
+            if (txtPass.Text == txtConfirm.Text)
             {
-                if (string.IsNullOrEmpty(magv))
+                var rs = new CSDL().ExeCute(sql, lstPara);
+                if (rs == 1)
                 {
-                    MessageBox.Show("Thêm mới thành công");
+                    if (string.IsNullOrEmpty(magv))
+                    {
+                        MessageBox.Show("Thêm mới thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thành công");
+                    }
+                    this.Dispose();
                 }
                 else
                 {
-                    MessageBox.Show("Cập nhật thành công");
+                    MessageBox.Show("Thao tác không thành công");
                 }
-                this.Dispose();
+
             }
             else
             {
-                MessageBox.Show("Thao tác không thành công");
+                MessageBox.Show("Mật khẩu nhập lại không khớp. Vui lòng nhập lại");
             }
+
+
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
         {
 
         }

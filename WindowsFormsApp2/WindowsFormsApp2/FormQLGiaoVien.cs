@@ -84,7 +84,7 @@ namespace WindowsFormsApp2
                     String sqlSearch = "";
                     if (cbbGVDanhSach.SelectedIndex == 0)
                     {
-                        sqlSearch = "exec searchMGV '" + valueSearch + "'";
+                        sqlSearch = "exec searchMGV N'" + valueSearch + "'";
                         if (db.SelectData(sqlSearch).Rows.Count != 0)
                         {
                             new SearchOutGV(sqlSearch).Show();

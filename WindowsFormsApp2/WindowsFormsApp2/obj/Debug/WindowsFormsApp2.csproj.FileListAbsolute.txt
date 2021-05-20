@@ -101,3 +101,31 @@ E:\Test TT CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsA
 E:\Test TT CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
 E:\Test TT CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 E:\Test TT CSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csprojAssemblyReference.cache
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormBienLaiGV.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormBienLaiHV.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormLogin.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormQLDD.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormQLGiaoVien.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormQLHocSinh.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormQLLopHoc.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormQLTHP.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormQLTL.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormThemBienLai.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormThemBL.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormThemGiaoVien.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormThemHocSinh.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormThemLopHoc.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.SearchOutGV.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.SearchOutHV.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.SearchOutLH.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.ThemBuoiHoc.resources
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\HP\Desktop\GIT\New folder\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb

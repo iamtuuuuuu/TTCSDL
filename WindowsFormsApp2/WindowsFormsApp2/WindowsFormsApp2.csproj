@@ -114,7 +114,9 @@
     <Compile Include="FormThemBienLai.designer.cs">
       <DependentUpon>FormThemBienLai.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormThemBL.cs" />
+    <Compile Include="FormThemBL.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormThemBL.designer.cs">
       <DependentUpon>FormThemBL.cs</DependentUpon>
     </Compile>

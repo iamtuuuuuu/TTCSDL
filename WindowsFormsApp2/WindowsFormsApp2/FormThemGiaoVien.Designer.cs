@@ -45,12 +45,16 @@ namespace WindowsFormsApp2
             this.radioNam = new System.Windows.Forms.RadioButton();
             this.radioNu = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtConfirm = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonThoat
             // 
             this.buttonThoat.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThoat.Location = new System.Drawing.Point(29, 435);
+            this.buttonThoat.Location = new System.Drawing.Point(29, 527);
             this.buttonThoat.Name = "buttonThoat";
             this.buttonThoat.Size = new System.Drawing.Size(112, 41);
             this.buttonThoat.TabIndex = 25;
@@ -61,7 +65,7 @@ namespace WindowsFormsApp2
             // buttonLuu
             // 
             this.buttonLuu.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLuu.Location = new System.Drawing.Point(420, 435);
+            this.buttonLuu.Location = new System.Drawing.Point(420, 527);
             this.buttonLuu.Name = "buttonLuu";
             this.buttonLuu.Size = new System.Drawing.Size(112, 41);
             this.buttonLuu.TabIndex = 24;
@@ -205,11 +209,52 @@ namespace WindowsFormsApp2
             this.label8.TabIndex = 31;
             this.label8.Text = "Giới tính";
             // 
+            // txtConfirm
+            // 
+            this.txtConfirm.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirm.Location = new System.Drawing.Point(214, 472);
+            this.txtConfirm.Name = "txtConfirm";
+            this.txtConfirm.Size = new System.Drawing.Size(318, 29);
+            this.txtConfirm.TabIndex = 33;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(26, 479);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 22);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Nhập lại mật khẩu";
+            // 
+            // txtPass
+            // 
+            this.txtPass.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(214, 413);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(318, 29);
+            this.txtPass.TabIndex = 35;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(26, 420);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 22);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "Mật khẩu";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
             // FormThemGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 499);
+            this.ClientSize = new System.Drawing.Size(554, 594);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtConfirm);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.radioNu);
             this.Controls.Add(this.radioNam);
@@ -252,5 +297,9 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.RadioButton radioNam;
         private System.Windows.Forms.RadioButton radioNu;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtConfirm;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.Label label9;
     }
 }
