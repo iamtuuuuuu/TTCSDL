@@ -36,7 +36,7 @@ namespace WindowsFormsApp2
             QuanLyHocSinhToolStripMenuItem.BackColor = Color.LightGray;
             QuanLyGiaoVienToolStripMenuItem.BackColor = Color.LightGray;
             QuanLyLopHocToolStripMenuItem.BackColor = Color.LightGray;
-            HuongDanToolStripMenuItem.BackColor = Color.LightGray;
+            //HuongDanToolStripMenuItem.BackColor = Color.LightGray;
         }
 
         private void ThoatToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace WindowsFormsApp2
             QuanLyHocSinhToolStripMenuItem.BackColor = Color.SkyBlue;
             QuanLyGiaoVienToolStripMenuItem.BackColor = Color.LightGray;
             QuanLyLopHocToolStripMenuItem.BackColor = Color.LightGray;
-            HuongDanToolStripMenuItem.BackColor = Color.LightGray;
+            //HuongDanToolStripMenuItem.BackColor = Color.LightGray;
             FormQLHocSinh f = new FormQLHocSinh();
             AddForm(f);
         }
@@ -59,7 +59,7 @@ namespace WindowsFormsApp2
             QuanLyHocSinhToolStripMenuItem.BackColor = Color.LightGray;
             QuanLyGiaoVienToolStripMenuItem.BackColor = Color.SkyBlue;
             QuanLyLopHocToolStripMenuItem.BackColor = Color.LightGray;
-            HuongDanToolStripMenuItem.BackColor = Color.LightGray;
+            //HuongDanToolStripMenuItem.BackColor = Color.LightGray;
             FormQLGiaoVien f = new FormQLGiaoVien();
             AddForm(f);
         }
@@ -69,7 +69,7 @@ namespace WindowsFormsApp2
             QuanLyHocSinhToolStripMenuItem.BackColor = Color.LightGray;
             QuanLyGiaoVienToolStripMenuItem.BackColor = Color.LightGray;
             QuanLyLopHocToolStripMenuItem.BackColor = Color.SkyBlue;
-            HuongDanToolStripMenuItem.BackColor = Color.LightGray;
+            //HuongDanToolStripMenuItem.BackColor = Color.LightGray;
             FormQLLopHoc f = new FormQLLopHoc();
             AddForm(f);
         }
@@ -79,7 +79,7 @@ namespace WindowsFormsApp2
             QuanLyHocSinhToolStripMenuItem.BackColor = Color.LightGray;
             QuanLyGiaoVienToolStripMenuItem.BackColor = Color.LightGray;
             QuanLyLopHocToolStripMenuItem.BackColor = Color.LightGray;
-            HuongDanToolStripMenuItem.BackColor = Color.SkyBlue;
+            //HuongDanToolStripMenuItem.BackColor = Color.SkyBlue;
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

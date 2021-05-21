@@ -35,7 +35,6 @@ namespace WindowsFormsApp2
             this.QuanLyHocSinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.QuanLyGiaoVienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.QuanLyLopHocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.HuongDanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelContent = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -48,8 +47,7 @@ namespace WindowsFormsApp2
             this.AdminToolStripMenuItem,
             this.QuanLyHocSinhToolStripMenuItem,
             this.QuanLyGiaoVienToolStripMenuItem,
-            this.QuanLyLopHocToolStripMenuItem,
-            this.HuongDanToolStripMenuItem});
+            this.QuanLyLopHocToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -95,13 +93,6 @@ namespace WindowsFormsApp2
             this.QuanLyLopHocToolStripMenuItem.Text = "Quản lý lớp học";
             this.QuanLyLopHocToolStripMenuItem.Click += new System.EventHandler(this.QuanLyLopHocToolStripMenuItem_Click_1);
             // 
-            // HuongDanToolStripMenuItem
-            // 
-            this.HuongDanToolStripMenuItem.Name = "HuongDanToolStripMenuItem";
-            this.HuongDanToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.HuongDanToolStripMenuItem.Text = "Hướng dẫn";
-            this.HuongDanToolStripMenuItem.Click += new System.EventHandler(this.HuongDanToolStripMenuItem_Click);
-            // 
             // panelContent
             // 
             this.panelContent.Location = new System.Drawing.Point(0, 27);
@@ -137,7 +128,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Panel panelContent;
         private System.Windows.Forms.ToolStripMenuItem QuanLyGiaoVienToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem QuanLyLopHocToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem HuongDanToolStripMenuItem;
     }
 }
 
