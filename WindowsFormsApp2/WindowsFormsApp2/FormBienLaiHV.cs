@@ -25,6 +25,7 @@ namespace WindowsFormsApp2
         private void FormBienLaiHV_Load(object sender, EventArgs e)
         {
             cbbThang.SelectedIndex = thang - 1;
+            this.Text = maHV;
             LoadThongTinBLChiTiet();
         }
         private void LoadThongTinBLChiTiet()
@@ -55,8 +56,6 @@ namespace WindowsFormsApp2
                     {
                         maBL = "BL20" + a.ToString() + maHV.Substring(maHV.Length - 2, 2) + "01";
                     }
-                    int countingDay = DateTime.DaysInMonth(2020, a);
-                    DateTime ngayThu = new DateTime(2020, a, countingDay);
                     int thang = a;
                     int tongTien = 0;
                     List<CustomParameter> lstPara = new List<CustomParameter>();
@@ -76,7 +75,7 @@ namespace WindowsFormsApp2
                     lstPara.Add(new CustomParameter()
                     {
                         key = "@NgayThu",
-                        value = ngayThu.ToString("yyyy-MM-dd")
+                        value = DBNull.Value.ToString()
                     });
 
                     lstPara.Add(new CustomParameter()
@@ -94,28 +93,89 @@ namespace WindowsFormsApp2
                     var rs = new CSDL().ExeCute(sql, lstPara);
                     if (rs == 0)
                         MessageBox.Show("Xem không thành công");
+
+                    string sql2 = "GhiNo";
+                    List<CustomParameter> lstPara2 = new List<CustomParameter>();
+                    lstPara2.Add(new CustomParameter()
+                    {
+                        key = "@MaHV",
+                        value = maHV
+                    });
+
+                    var rs2 = new CSDL().ExeCute(sql2, lstPara2);
+                    if (rs2 == 0)
+                        MessageBox.Show("Ghi nợ không thành công");
                 }
 
                 var r = new CSDL().Select(string.Format("SelectBienLaiHPByMaHVAndThang '" + maHV + "', " + a));
                 lbMaHV.Text = r["MaHV"].ToString();
                 lbHoTen.Text = r["HoTen"].ToString();
-                lbNgayThanhToan.Text = r["NgayThu"].ToString();
+                dtpkNgayThanhToan.Value = DateTime.ParseExact(r["NgayThu"].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
                 lbThangDong.Text = r["Thang"].ToString();
                 lbTongTien.Text = r["TongTien"].ToString();
+                lbSoThangNo.Text = r["SoThangChuaTra"].ToString();
+                if (dtpkNgayThanhToan.Value.ToString() != "1/1/1900 12:00:00 AM")
+                {
+                    dtpkNgayThanhToan.Enabled = false;
+                    ckbDongTien.Checked = true;
+                    ckbDongTien.Enabled = false;
+                }
+                else
+                {
+                    dtpkNgayThanhToan.Enabled = true;
+                    ckbDongTien.Checked = false;
+                    ckbDongTien.Enabled = true;
+                }
+                    
             }
             else
             {
                 lbMaHV.Text = "None";
                 lbHoTen.Text = "None";
-                lbNgayThanhToan.Text = "None";
+                dtpkNgayThanhToan.Value = DateTime.Now;
                 lbThangDong.Text = "None";
                 lbTongTien.Text = "None";
+                lbSoThangNo.Text = "None";
             }
         }
 
         private void cbbThang_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadThongTinBLChiTiet();
+        }
+
+
+        private void ckbDongTien_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (MessageBox.Show("Học viên này vừa đóng tiền?", "Questions???",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string sql = "DongTien";
+                List<CustomParameter> lstPara = new List<CustomParameter>();
+                lstPara.Add(new CustomParameter()
+                {
+                    key = "@MaHV",
+                    value = lbMaHV.Text
+                });
+                lstPara.Add(new CustomParameter()
+                {
+                    key = "@Thang",
+                    value = lbThangDong.Text
+                });
+                lstPara.Add(new CustomParameter()
+                {
+                    key = "@NgayThu",
+                    value = dtpkNgayThanhToan.Value.ToString("yyyy-MM-dd")
+                });
+                var rs = new CSDL().ExeCute(sql, lstPara);
+                if (rs == 0)
+                    MessageBox.Show("Đóng tiền không thành công");
+                this.Close();
+            }
+            else
+            {
+                ckbDongTien.Checked = false;
+            }
         }
     }
 }

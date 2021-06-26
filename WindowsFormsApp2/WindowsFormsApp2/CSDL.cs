@@ -11,7 +11,7 @@ namespace WindowsFormsApp2
 {
     public class CSDL
     {
-        private string connectionString = "Data Source=DESKTOP-68O7DLF;Initial Catalog=Quản lý trung tâm học thêm;Trusted_Connection=Yes;";
+        private string connectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Quản lý trung tâm học thêm;Trusted_Connection=Yes;";
         private SqlConnection conn;
 
         //private string sql;

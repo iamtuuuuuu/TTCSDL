@@ -121,7 +121,7 @@ namespace WindowsFormsApp2
                     }
                     else
                     {
-                        MessageBox.Show("Thao tác them diem danh không thành công");
+                        MessageBox.Show("Thao tác thêm điểm danh không thành công");
                     }
                 }
                 MessageBox.Show("Thêm mới thành công"

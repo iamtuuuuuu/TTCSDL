@@ -236,7 +236,7 @@ namespace WindowsFormsApp2
                 }
             }
 
-            if (r == 1)
+            if (r == 2)
             {
                 if (string.IsNullOrEmpty(maHV))
                 {
