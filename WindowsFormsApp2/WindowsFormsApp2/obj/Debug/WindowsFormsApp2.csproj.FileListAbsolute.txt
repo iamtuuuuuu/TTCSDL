@@ -25,7 +25,6 @@ D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.cs
 D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
 D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormBienLaiGV.resources
 D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormBienLaiHV.resources
-D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormDoiMatKhau.resources
 D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormLogin.resources
 D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormQLDD.resources
 D:\TTCSDL\TTCSDL\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormQLGiaoVien.resources

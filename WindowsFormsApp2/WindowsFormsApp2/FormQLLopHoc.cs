@@ -111,6 +111,16 @@ namespace WindowsFormsApp2
             {
                 var tenLH = dataGridViewDanhSachLop.CurrentRow.Cells["TenLH"].Value.ToString();
                 var idLH = dataGridViewDanhSachLop.CurrentRow.Cells["MaLH"].Value.ToString();
+                db.deleteHV_LH(idLH);
+                string getMaBuoiHoc = "select MaBH from BUOIHOC where MaLH = \'" + idLH + "\'";
+                DataTable maBHTable = db.SelectData(getMaBuoiHoc);
+                Console.WriteLine(maBHTable);
+                for(int i = 0; i < maBHTable.Rows.Count; i++)
+                {
+                    db.deleteDiemDanh(maBHTable.Rows[i][0].ToString());
+                }
+
+                db.deleteBuoiHoc(idLH);
                 db.deleteLH(idLH);
                 MessageBox.Show("Đã xóa lớp học : " + tenLH);
             }
