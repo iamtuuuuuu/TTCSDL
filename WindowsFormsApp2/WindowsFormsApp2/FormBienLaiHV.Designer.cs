@@ -33,7 +33,6 @@ namespace WindowsFormsApp2
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbTongTien = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lbNgayThanhToan = new System.Windows.Forms.Label();
             this.lbHoTen = new System.Windows.Forms.Label();
             this.lbMaHV = new System.Windows.Forms.Label();
             this.dgvBienLaiChiTiet = new System.Windows.Forms.DataGridView();
@@ -46,6 +45,8 @@ namespace WindowsFormsApp2
             this.label7 = new System.Windows.Forms.Label();
             this.lbThangDong = new System.Windows.Forms.Label();
             this.cbbThang = new System.Windows.Forms.ComboBox();
+            this.dtpkNgayThanhToan = new System.Windows.Forms.DateTimePicker();
+            this.ckbDongTien = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBienLaiChiTiet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,16 +70,6 @@ namespace WindowsFormsApp2
             this.label6.Size = new System.Drawing.Size(100, 24);
             this.label6.TabIndex = 18;
             this.label6.Text = "Tổng tiền: ";
-            // 
-            // lbNgayThanhToan
-            // 
-            this.lbNgayThanhToan.AutoSize = true;
-            this.lbNgayThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgayThanhToan.Location = new System.Drawing.Point(181, 201);
-            this.lbNgayThanhToan.Name = "lbNgayThanhToan";
-            this.lbNgayThanhToan.Size = new System.Drawing.Size(57, 24);
-            this.lbNgayThanhToan.TabIndex = 17;
-            this.lbNgayThanhToan.Text = "None";
             // 
             // lbHoTen
             // 
@@ -120,7 +111,7 @@ namespace WindowsFormsApp2
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvBienLaiChiTiet.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvBienLaiChiTiet.Location = new System.Drawing.Point(330, 124);
+            this.dgvBienLaiChiTiet.Location = new System.Drawing.Point(360, 124);
             this.dgvBienLaiChiTiet.Name = "dgvBienLaiChiTiet";
             this.dgvBienLaiChiTiet.RowHeadersWidth = 51;
             this.dgvBienLaiChiTiet.Size = new System.Drawing.Size(671, 243);
@@ -225,18 +216,41 @@ namespace WindowsFormsApp2
             "Tháng 10",
             "Tháng 11",
             "Tháng 12"});
-            this.cbbThang.Location = new System.Drawing.Point(786, 27);
+            this.cbbThang.Location = new System.Drawing.Point(839, 27);
             this.cbbThang.MaxDropDownItems = 6;
             this.cbbThang.Name = "cbbThang";
             this.cbbThang.Size = new System.Drawing.Size(121, 24);
             this.cbbThang.TabIndex = 20;
             this.cbbThang.SelectedIndexChanged += new System.EventHandler(this.cbbThang_SelectedIndexChanged);
             // 
+            // dtpkNgayThanhToan
+            // 
+            this.dtpkNgayThanhToan.CustomFormat = "dd/MM/yyyy";
+            this.dtpkNgayThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpkNgayThanhToan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpkNgayThanhToan.Location = new System.Drawing.Point(181, 203);
+            this.dtpkNgayThanhToan.Name = "dtpkNgayThanhToan";
+            this.dtpkNgayThanhToan.Size = new System.Drawing.Size(90, 23);
+            this.dtpkNgayThanhToan.TabIndex = 21;
+            this.dtpkNgayThanhToan.Value = new System.DateTime(2021, 6, 26, 0, 0, 0, 0);
+            // 
+            // ckbDongTien
+            // 
+            this.ckbDongTien.AutoSize = true;
+            this.ckbDongTien.Location = new System.Drawing.Point(278, 208);
+            this.ckbDongTien.Name = "ckbDongTien";
+            this.ckbDongTien.Size = new System.Drawing.Size(15, 14);
+            this.ckbDongTien.TabIndex = 22;
+            this.ckbDongTien.UseVisualStyleBackColor = true;
+            this.ckbDongTien.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ckbDongTien_MouseClick);
+            // 
             // FormBienLaiHV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1053, 482);
+            this.ClientSize = new System.Drawing.Size(1101, 427);
+            this.Controls.Add(this.ckbDongTien);
+            this.Controls.Add(this.dtpkNgayThanhToan);
             this.Controls.Add(this.cbbThang);
             this.Controls.Add(this.lbSoThangNo);
             this.Controls.Add(this.lbThangDong);
@@ -244,7 +258,6 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.lbNgayThanhToan);
             this.Controls.Add(this.lbHoTen);
             this.Controls.Add(this.lbMaHV);
             this.Controls.Add(this.dgvBienLaiChiTiet);
@@ -266,7 +279,6 @@ namespace WindowsFormsApp2
 
         private System.Windows.Forms.Label lbTongTien;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lbNgayThanhToan;
         private System.Windows.Forms.Label lbHoTen;
         private System.Windows.Forms.Label lbMaHV;
         private System.Windows.Forms.DataGridView dgvBienLaiChiTiet;
@@ -279,5 +291,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbThangDong;
         private System.Windows.Forms.ComboBox cbbThang;
+        private System.Windows.Forms.DateTimePicker dtpkNgayThanhToan;
+        private System.Windows.Forms.CheckBox ckbDongTien;
     }
 }

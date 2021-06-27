@@ -599,7 +599,8 @@ CREATE PROCEDURE SelectAllBLThuHP
 AS
 	SELECT *
 	FROM BIENLAITHUHOCPHI
-	ORDER BY MaHV, NgayThu
+	ORDER BY MaHV, Thang
+
 
 --DROP PROCEDURE SelectAllBLThuHP
 
@@ -750,7 +751,7 @@ GO
 CREATE PROCEDURE SelectBienLaiHPByMaHVAndThang (@MaHV CHAR(6), @Thang INT)
 AS
 BEGIN
-	SELECT b.MaHV, b.HoTen, convert(VARCHAR(10), a.NgayThu, 103) AS NgayThu, a.TongTien, a.Thang
+	SELECT b.MaHV, b.HoTen, convert(VARCHAR(10), a.NgayThu, 103) AS NgayThu, a.TongTien, a.Thang, c.SoThangChuaTra
 	FROM BIENLAITHUHOCPHI a, HOCVIEN b, THONGTINNO c
 	WHERE a.MaHV = b.MaHV AND b.MaHV = c.MaHV AND b.MaHV = @MaHV AND a.Thang = @Thang
 END
@@ -787,6 +788,8 @@ CREATE PROCEDURE ThemHocVien
 AS
 BEGIN
 	INSERT INTO HOCVIEN VALUES (@MaHV, @HoTen, @SDT, @NgaySinh, @DiaChi, @GioiTinh);
+	DECLARE @temp CHAR(6) = CONCAT('MN', SUBSTRING(@MaHV, 3, 4))
+	INSERT INTO THONGTINNO VALUES (@temp, 0, @MaHV)
 	IF @@ROWCOUNT > 0 begin return 1 end
 	else begin return 0 end;
 END
@@ -820,6 +823,55 @@ BEGIN
 		GioiTinh = @GioiTinh
 	WHERE MaHV = @MaHV
 END
+
+GO
+CREATE PROCEDURE DongTien (@MaHV CHAR(6), @Thang INT, @NgayThu DATE)
+AS
+BEGIN
+	UPDATE BIENLAITHUHOCPHI
+	SET NgayThu = @NgayThu
+	WHERE MaHV = @MaHV AND Thang = @Thang
+	DECLARE @temp INT
+	SET @temp = (SELECT SoThangChuaTra
+				FROM THONGTINNO
+				WHERE MaHV = @MaHV
+				)
+	IF (@temp > 0)
+	BEGIN
+		IF (@temp = 1)
+		BEGIN
+			UPDATE THONGTINNO
+			SET SoThangChuaTra = 0
+			WHERE MaHV = @MaHV
+		END
+		ELSE
+		BEGIN
+			UPDATE THONGTINNO
+			SET SoThangChuaTra = @temp - 1
+			WHERE MaHV = @MaHV
+		END
+	END
+
+	IF @@ROWCOUNT > 0 begin return 1 end
+	else begin return 0 end;
+END
+
+GO 
+CREATE PROCEDURE GhiNo (@MaHV CHAR(6))
+AS
+BEGIN
+	DECLARE @temp INT
+	SET @temp = (SELECT SoThangChuaTra
+				FROM THONGTINNO
+				WHERE MaHV = @MaHV
+				)
+	UPDATE THONGTINNO
+	SET SoThangChuaTra = @temp + 1
+	WHERE MaHV = @MaHV
+
+	IF @@ROWCOUNT > 0 begin return 1 end
+	else begin return 0 end;
+END
 ---------------login
 go
 alter table GIAOVIEN 
@@ -835,7 +887,6 @@ begin
 	IF EXISTS (SELECT * FROM GIAOVIEN WHERE GIAOVIEN.SDT = @username AND GIAOVIEN.pass = @pass) begin return 1 end
 		else begin return 0 end;
 end
-
 
 
 

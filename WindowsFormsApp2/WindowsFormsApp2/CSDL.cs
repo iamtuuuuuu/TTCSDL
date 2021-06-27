@@ -11,7 +11,7 @@ namespace WindowsFormsApp2
 {
     public class CSDL
     {
-        private string connectionString = "Data Source=lapcuatung\\SQLEXPRESS;Initial Catalog=Quản lý trung tâm học thêm;Trusted_Connection=Yes;";
+        private string connectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Quản lý trung tâm học thêm;Trusted_Connection=Yes;";
         private SqlConnection conn;
 
         //private string sql;
@@ -104,6 +104,72 @@ namespace WindowsFormsApp2
             {
                 conn.Open();
                 string sql = "DELETE From LOPHOC where MaLH = '" + id + "'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+                check = true;
+                conn.Close();
+            }
+            catch (Exception)
+            {
+                check = false;
+                throw;
+            }
+
+
+            return check;
+        }
+
+        public Boolean deleteBuoiHoc(String id)
+        {
+            bool check = false;
+            try
+            {
+                conn.Open();
+                string sql = "DELETE From BUOIHOC where MaLH = '" + id + "'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+                check = true;
+                conn.Close();
+            }
+            catch (Exception)
+            {
+                check = false;
+                throw;
+            }
+
+
+            return check;
+        }
+
+        public Boolean deleteHV_LH(String id)
+        {
+            bool check = false;
+            try
+            {
+                conn.Open();
+                string sql = "DELETE From HOCVIEN_LOPHOC where MaLH = '" + id + "'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+                check = true;
+                conn.Close();
+            }
+            catch (Exception)
+            {
+                check = false;
+                throw;
+            }
+
+
+            return check;
+        }
+
+        public Boolean deleteDiemDanh(String id)
+        {
+            bool check = false;
+            try
+            {
+                conn.Open();
+                string sql = "DELETE From DIEMDANH where MaBH = '" + id + "'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
                 check = true;
