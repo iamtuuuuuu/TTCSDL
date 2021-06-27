@@ -33,10 +33,48 @@ namespace WindowsFormsApp2
             label5.Text = data.ItemArray[1].ToString();
             label7.Text = data.ItemArray[2].ToString();
 
-            DateTime curDate = DateTime.ParseExact(
-            data.ItemArray[1].ToString(), "dd/M/yyyy hh:mm:ss tt",
-                                        CultureInfo.InvariantCulture);
-            DateTime preDate = curDate.AddYears(-1);
+
+
+            DateTime dt;
+            string[] formats1 = { "dd/MM/yyyy hh:mm:ss tt" };
+
+            if (DateTime.TryParseExact(data.ItemArray[1].ToString(), formats1,
+                System.Globalization.CultureInfo.InvariantCulture,
+                DateTimeStyles.None, out dt))
+            {
+            }
+
+
+            string[] formats2 = { "d/M/yyyy hh:mm:ss tt" };
+
+            if (DateTime.TryParseExact(data.ItemArray[1].ToString(), formats2,
+               System.Globalization.CultureInfo.InvariantCulture,
+               DateTimeStyles.None, out dt))
+            {
+                
+            }
+            string[] formats3 = { "d/MM/yyyy hh:mm:ss tt" };
+
+            if (DateTime.TryParseExact(data.ItemArray[1].ToString(), formats3,
+               System.Globalization.CultureInfo.InvariantCulture,
+               DateTimeStyles.None, out dt))
+            {
+
+            }
+            string[] formats4 = { "dd/M/yyyy hh:mm:ss tt" };
+
+            if (DateTime.TryParseExact(data.ItemArray[1].ToString(), formats4,
+               System.Globalization.CultureInfo.InvariantCulture,
+               DateTimeStyles.None, out dt))
+            {
+
+            }
+
+
+            //DateTime curDate = DateTime.ParseExact(
+            //data.ItemArray[1].ToString(), "dd/MM/yyyy hh:mm:ss tt",
+            //                            CultureInfo.InvariantCulture);
+            DateTime preDate = dt.AddYears(-1);
 
             dataGridView1.DataSource = new CSDL().SelectData("select * from tesst('"+ magv+"','" + preDate.ToString()+ "','" + data.ItemArray[1].ToString()  + "')");
             //dataGridView1.DataSource = new CSDL().SelectData("select * from tesst('" + magv + "','02/09/2020 12:00:00 AM','02/10/2021 12:00:00 AM')");
